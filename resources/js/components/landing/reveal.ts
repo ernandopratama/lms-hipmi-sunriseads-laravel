@@ -20,7 +20,12 @@ export const vReveal: Directive<HTMLElement> = {
     const io = getObserver();
     if (!io) return;
     el.classList.add("reveal");
-    io.observe(el);
+    // Hold page entrance animations until the preloader overlay has gone.
+    if (document.documentElement.classList.contains("sd-loading")) {
+      addEventListener("sd:preloader-done", () => io.observe(el), { once: true });
+    } else {
+      io.observe(el);
+    }
   },
   unmounted(el) {
     observer?.unobserve(el);

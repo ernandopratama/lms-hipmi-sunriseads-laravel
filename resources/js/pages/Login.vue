@@ -3,6 +3,7 @@ import { ref } from "vue";
 import { ArrowLeft, ArrowRight, Eye, EyeOff, ShieldCheck } from "@lucide/vue";
 import { csrfFetch } from "@/lib/csrf";
 import "@/components/landing/landing.css";
+import { vReveal } from "@/components/landing/reveal";
 import BrandLogo from "@/components/BrandLogo.vue";
 
 const accessNotes = [
@@ -60,7 +61,7 @@ const vFocus = { mounted: (el: HTMLElement) => el.focus() };
 
 <template>
   <main class="public-site lp min-h-screen bg-[var(--sub-bg)]">
-    <header>
+    <header v-reveal>
       <div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 sm:h-24 sm:px-8 lg:px-12">
         <a href="/" aria-label="Sunrise Academy — Beranda"><BrandLogo class="text-xl" /></a>
         <a href="/" aria-label="Kembali ke beranda" class="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 font-spartan text-sm font-semibold text-[var(--heading-color)] hover:text-[var(--primary-color)]"><ArrowLeft aria-hidden="true" :size="16" /> <span class="hidden sm:inline">Kembali ke beranda</span></a>
@@ -70,16 +71,16 @@ const vFocus = { mounted: (el: HTMLElement) => el.focus() };
     <div class="mx-auto grid min-h-[calc(100vh-6rem)] max-w-[1440px] lg:grid-cols-[.95fr_1.05fr]">
       <section class="order-2 flex flex-col justify-between px-5 py-14 sm:px-8 sm:py-20 lg:order-1 lg:px-12 lg:py-24 xl:pr-20">
         <div>
-          <h5 class="primary-color mb-[10px] uppercase">Area pengguna</h5>
-          <h1 class="max-w-2xl">
+          <h5 v-reveal class="primary-color mb-[10px] uppercase" style="transition-delay: 200ms">Area pengguna</h5>
+          <h1 v-reveal class="max-w-2xl" style="transition-delay: 300ms">
             Kembali ke pekerjaan yang <span class="primary-color">sedang berjalan.</span>
           </h1>
-          <p class="mt-5 max-w-xl">
+          <p v-reveal class="mt-5 max-w-xl" style="transition-delay: 400ms">
             Satu pintu masuk untuk belajar, memberi umpan balik, dan membaca perkembangan program sekolah.
           </p>
 
           <div class="mt-12 max-w-xl border-t border-[var(--border)]">
-            <div v-for="item in accessNotes" :key="item.number" class="grid grid-cols-[34px_82px_1fr] gap-3 border-b border-[var(--border)] py-4 text-sm">
+            <div v-for="(item, index) in accessNotes" :key="item.number" v-reveal :style="{ transitionDelay: `${500 + index * 120}ms` }" class="grid grid-cols-[34px_82px_1fr] gap-3 border-b border-[var(--border)] py-4 text-sm">
               <span class="font-spartan font-bold text-[var(--primary-color)]">{{ item.number }}</span>
               <strong class="font-spartan text-base font-semibold text-[var(--heading-color)]">{{ item.title }}</strong>
               <span class="leading-6">{{ item.note }}</span>
@@ -92,7 +93,7 @@ const vFocus = { mounted: (el: HTMLElement) => el.focus() };
 
       <section class="order-1 flex items-center px-5 py-6 sm:px-8 sm:py-10 lg:order-2 lg:px-12 lg:py-20">
         <div class="mx-auto w-full max-w-[540px]">
-          <div class="contact__item">
+          <div v-reveal class="contact__item" style="transition-delay: 150ms">
             <h5 class="primary-color uppercase">Masuk ke platform</h5>
             <h2 class="mt-1">Selamat datang kembali.</h2>
             <p class="mb-8 mt-2 !text-sm">Masukkan detail akun sekolah Anda untuk melanjutkan ke ruang kerja.</p>
@@ -150,7 +151,7 @@ const vFocus = { mounted: (el: HTMLElement) => el.focus() };
             </p>
           </div>
 
-          <p class="mt-6 !text-xs !leading-5">Sunrise Academy tidak pernah meminta kata sandi toko atau marketplace Anda.</p>
+          <p v-reveal class="mt-6 !text-xs !leading-5" style="transition-delay: 450ms">Sunrise Academy tidak pernah meminta kata sandi toko atau marketplace Anda.</p>
         </div>
       </section>
     </div>

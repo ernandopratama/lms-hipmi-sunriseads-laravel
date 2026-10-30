@@ -119,7 +119,7 @@ onUnmounted(() => {
     <button type="button" aria-label="Tutup menu" class="sidebar-backdrop" @click="isOpen = false" />
     <div id="site-navigation" class="sidebar-area" role="dialog" aria-modal="true" aria-label="Menu Sunrise Academy">
       <div class="sidebar__head">
-        <a href="/" aria-label="Sunrise Academy — Beranda" @click="isOpen = false"><BrandLogo class="text-base !text-white" /></a>
+        <a href="/" aria-label="Sunrise Academy — Beranda" @click="isOpen = false"><BrandLogo class="text-base" /></a>
         <button type="button" class="sidebar__close" aria-label="Tutup menu" @click="isOpen = false"><X aria-hidden="true" :size="16" /></button>
       </div>
       <nav class="sidebar__nav" aria-label="Navigasi utama">
@@ -133,7 +133,7 @@ onUnmounted(() => {
       <div class="sidebar__btns">
         <a :href="session ? '/dashboard' : '/login'" @click="isOpen = false">{{ session ? "Buka dashboard" : "Masuk ke platform" }} <ArrowRight aria-hidden="true" :size="15" /></a>
         <a href="/#register" class="ghost" @click="isOpen = false">Hubungi tim kami</a>
-        <p v-if="session" class="text-center text-xs text-white/50">Masuk sebagai {{ session.email?.split("@")[0] || "pengguna" }}</p>
+        <p v-if="session" class="text-center text-xs text-slate-500">Masuk sebagai {{ session.email?.split("@")[0] || "pengguna" }}</p>
       </div>
     </div>
   </template>

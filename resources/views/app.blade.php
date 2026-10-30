@@ -18,9 +18,11 @@
     <link rel="apple-touch-icon" href="/icon-192.png">
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="theme-color" content="#f97316">
+    <link rel="preload" href="/logo/06-logo-aplikasi-NoBg.png" as="image" fetchpriority="high">
     @vite('resources/js/app.ts')
 </head>
 <body class="min-h-full">
+    @include('partials.preloader')
     <div id="app"></div>
 </body>
 </html>
