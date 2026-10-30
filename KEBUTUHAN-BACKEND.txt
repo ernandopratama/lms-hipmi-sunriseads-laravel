@@ -1,0 +1,64 @@
+KEBUTUHAN UNTUK MELANJUTKAN BACKEND - SUNRISE ACADEMY (LMS HIPMI)
+==================================================================
+
+Ringkasan
+---------
+Hanya 2 hal yang perlu disiapkan sekarang: kunci OpenAI dan akun email SMTP.
+WhatsApp dan SMS belum perlu nomor, karena di sistem asli (NestJS) keduanya belum pernah
+bisa mengirim pesan. Fitur pengirimnya harus dibuat dulu.
+
+PENTING: jangan kirim API key atau password lewat chat atau email. Isi langsung ke file .env
+di komputer atau server, lalu jalankan:  php artisan config:clear
+File .env tidak boleh dibagikan atau dimasukkan ke git.
+
+
+1. OPENAI (penilaian tugas otomatis dengan AI)
+------------------------------------------------
+Status    : kode sudah siap. Fitur langsung jalan begitu key diisi.
+Disiapkan :
+  [ ] Akun di https://platform.openai.com dengan billing/saldo aktif
+  [ ] API key (diawali "sk-")
+  [ ] (Opsional) nama model. Jika kosong dipakai gpt-5.4-mini, sama seperti sistem asli.
+
+Isi di .env:
+  OPENAI_API_KEY=sk-...
+  OPENAI_ASSESSMENT_MODEL=gpt-5.4-mini
+
+
+2. AKUN EMAIL PENGIRIM (SMTP)
+-----------------------------
+Status    : email undangan aktivasi akun dan reset password akan langsung terkirim setelah SMTP diisi.
+            Notifikasi aplikasi lewat email (tugas dikirim, review terbit, helpdesk)
+            BELUM dibuat di Laravel. Saat ini notifikasi itu hanya muncul di dalam aplikasi.
+Disiapkan :
+  [ ] Alamat pengirim, sebaiknya dengan domain sendiri
+      (contoh dari sistem asli: no-reply@sunriseadsacademy.com)
+  [ ] Layanan SMTP, salah satu:
+        - email hosting domain (misalnya Hostinger), atau
+        - layanan email transaksi: Brevo, Mailgun, Amazon SES
+      (Gmail kurang cocok: batas kirim rendah dan mudah masuk spam)
+  [ ] Data SMTP: host, port (biasanya 587), username, password
+  [ ] Pengaturan DNS domain agar tidak masuk spam: SPF, DKIM, DMARC
+
+Isi di .env:
+  MAIL_MAILER=smtp
+  MAIL_HOST=smtp.domainanda.com
+  MAIL_PORT=587
+  MAIL_USERNAME=no-reply@domainanda.com
+  MAIL_PASSWORD=...
+  MAIL_FROM_ADDRESS=no-reply@domainanda.com
+  MAIL_FROM_NAME="Sunrise Academy"
+
+Pekerjaan lanjutan: membuat pengiriman notifikasi aplikasi lewat email (seperti di sistem asli).
+
+
+3. Nomor Hp Untuk WA dan SMS
+
+
+Catatan lain
+------------
+- Queue harus berjalan supaya email, sertifikat, import, dan export diproses:
+    development : composer dev
+    hosting     : cron setiap menit -> php artisan schedule:run
+- Jangan mengisi BLIND_INDEX_KEY di .env sebelum kodenya diperbaiki. Jika diisi,
+  pemeriksaan NISN ganda tidak lagi konsisten.

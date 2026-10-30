@@ -1,0 +1,68 @@
+[
+  {
+    "name": "MGMP KIK — Proyek Kewirausahaan",
+    "description": "Rekomendasi AI untuk kompetensi KIK. Nilai tetap harus ditinjau guru MGMP KIK sebelum dipublikasikan.",
+    "criteria": [
+      {
+        "name": "Ide dan inovasi produk",
+        "description": "Nilai orisinalitas, relevansi masalah, dan nilai jual ide."
+      },
+      {
+        "name": "Perencanaan bisnis",
+        "description": "Nilai target pasar, harga, modal, dan kelayakan rencana."
+      },
+      {
+        "name": "Strategi pemasaran",
+        "description": "Nilai kecocokan strategi dengan target pasar dan media yang dipilih."
+      },
+      {
+        "name": "Presentasi dan bukti",
+        "description": "Nilai kejelasan penjelasan serta kelengkapan bukti karya."
+      }
+    ]
+  },
+  {
+    "name": "MGMP Bahasa Inggris — Komunikasi Proyek",
+    "description": "Rekomendasi AI untuk kemampuan berbahasa Inggris pada karya atau presentasi tertulis. Guru Bahasa Inggris memvalidasi hasilnya.",
+    "criteria": [
+      {
+        "name": "Grammar dan struktur kalimat",
+        "description": "Nilai ketepatan tata bahasa serta kejelasan struktur kalimat."
+      },
+      {
+        "name": "Vocabulary",
+        "description": "Nilai ketepatan dan variasi kosakata sesuai konteks proyek."
+      },
+      {
+        "name": "Kejelasan komunikasi",
+        "description": "Nilai keterbacaan dan kelancaran penyampaian dalam bukti teks."
+      },
+      {
+        "name": "Organisasi penyampaian",
+        "description": "Nilai keruntutan pembukaan, isi, dan penutup."
+      }
+    ]
+  },
+  {
+    "name": "MGMP Informatika — Produk Digital",
+    "description": "Rekomendasi AI untuk kompetensi Informatika. Penilaian hanya memakai bukti teks yang dikirim; guru memeriksa artefak digital sebelum menyetujui.",
+    "criteria": [
+      {
+        "name": "Ketepatan penggunaan teknologi",
+        "description": "Nilai kesesuaian aplikasi atau teknologi yang digunakan dengan tujuan tugas."
+      },
+      {
+        "name": "Kualitas produk digital",
+        "description": "Nilai fungsi, kerapian, dan kesiapan produk digital berdasarkan bukti."
+      },
+      {
+        "name": "Pengolahan informasi atau data",
+        "description": "Nilai akurasi, struktur, dan keterbacaan data atau informasi."
+      },
+      {
+        "name": "Dokumentasi proses kerja",
+        "description": "Nilai kelengkapan langkah kerja dan bukti proses."
+      }
+    ]
+  }
+]

@@ -1,0 +1,1444 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/backend/academic-years",
+    "controller": "AcademicYearsController",
+    "handler": "findAll",
+    "source": "apps/api/src/academic-years/academic-years.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/academic-years",
+    "controller": "AcademicYearsController",
+    "handler": "create",
+    "source": "apps/api/src/academic-years/academic-years.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/academic-years/{id}/activate",
+    "controller": "AcademicYearsController",
+    "handler": "activate",
+    "source": "apps/api/src/academic-years/academic-years.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/academic-years/{id}/semesters",
+    "controller": "AcademicYearsController",
+    "handler": "createSemester",
+    "source": "apps/api/src/academic-years/academic-years.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/access/effective",
+    "controller": "AccessController",
+    "handler": "getEffective",
+    "source": "apps/api/src/access/access.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/access/grants",
+    "controller": "AccessController",
+    "handler": "createGrant",
+    "source": "apps/api/src/access/access.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/access/plans",
+    "controller": "AccessController",
+    "handler": "getPublicPlans",
+    "source": "apps/api/src/access/access.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/affiliate/accounts",
+    "controller": "AffiliateController",
+    "handler": "accounts",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/affiliate/accounts",
+    "controller": "AffiliateController",
+    "handler": "createAccount",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/affiliate/accounts/{id}/review",
+    "controller": "AffiliateController",
+    "handler": "reviewAccount",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/affiliate/content",
+    "controller": "AffiliateController",
+    "handler": "saveContent",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/affiliate/export",
+    "controller": "AffiliateController",
+    "handler": "exportPerformance",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/affiliate/flags/{id}/resolve",
+    "controller": "AffiliateController",
+    "handler": "resolveFlag",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/affiliate/metric-imports",
+    "controller": "AffiliateController",
+    "handler": "metricImports",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/affiliate/metric-imports",
+    "controller": "AffiliateController",
+    "handler": "createMetricImport",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/affiliate/metrics/{id}/verify",
+    "controller": "AffiliateController",
+    "handler": "verifyMetric",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/affiliate/my-performance",
+    "controller": "AffiliateController",
+    "handler": "getMyPerformance",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/affiliate/providers",
+    "controller": "AffiliateController",
+    "handler": "providers",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/affiliate/students/{studentId}/performance",
+    "controller": "AffiliateController",
+    "handler": "getStudentPerformance",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/affiliate/verification-queue",
+    "controller": "AffiliateController",
+    "handler": "verificationQueue",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/affiliate/videos/{videoId}/snapshots",
+    "controller": "AffiliateController",
+    "handler": "createSnapshot",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/affiliate/workspace",
+    "controller": "AffiliateController",
+    "handler": "workspace",
+    "source": "apps/api/src/affiliate/affiliate.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/assignments",
+    "controller": "AssignmentsController",
+    "handler": "findAll",
+    "source": "apps/api/src/assignments/assignments.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/assignments",
+    "controller": "AssignmentsController",
+    "handler": "create",
+    "source": "apps/api/src/assignments/assignments.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/assignments/{id}",
+    "controller": "AssignmentsController",
+    "handler": "delete",
+    "source": "apps/api/src/assignments/assignments.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/assignments/{id}",
+    "controller": "AssignmentsController",
+    "handler": "findOne",
+    "source": "apps/api/src/assignments/assignments.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/assignments/{id}",
+    "controller": "AssignmentsController",
+    "handler": "update",
+    "source": "apps/api/src/assignments/assignments.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/auth/account",
+    "controller": "AuthController",
+    "handler": "getAccount",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/backend/auth/account",
+    "controller": "AuthController",
+    "handler": "updateAccount",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/change-password",
+    "controller": "AuthController",
+    "handler": "changePassword",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/forgot-password",
+    "controller": "AuthController",
+    "handler": "forgotPassword",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/login",
+    "controller": "AuthController",
+    "handler": "login",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/logout",
+    "controller": "AuthController",
+    "handler": "logout",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/logout-all",
+    "controller": "AuthController",
+    "handler": "logoutAll",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/auth/me",
+    "controller": "AuthController",
+    "handler": "getMe",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/mfa/confirm",
+    "controller": "AuthController",
+    "handler": "confirmMfa",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/mfa/disable",
+    "controller": "AuthController",
+    "handler": "disableMfa",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/mfa/setup",
+    "controller": "AuthController",
+    "handler": "setupMfa",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/refresh",
+    "controller": "AuthController",
+    "handler": "refresh",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/register",
+    "controller": "AuthController",
+    "handler": "register",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/auth/reset-password",
+    "controller": "AuthController",
+    "handler": "resetPassword",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/auth/schools",
+    "controller": "AuthController",
+    "handler": "getSchools",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/auth/sessions",
+    "controller": "AuthController",
+    "handler": "listSessions",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/auth/sessions/{id}",
+    "controller": "AuthController",
+    "handler": "revokeSession",
+    "source": "apps/api/src/auth/auth.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/classes",
+    "controller": "ClassesController",
+    "handler": "findAll",
+    "source": "apps/api/src/classes/classes.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/classes",
+    "controller": "ClassesController",
+    "handler": "create",
+    "source": "apps/api/src/classes/classes.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/classes/{id}",
+    "controller": "ClassesController",
+    "handler": "archive",
+    "source": "apps/api/src/classes/classes.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/classes/{id}",
+    "controller": "ClassesController",
+    "handler": "update",
+    "source": "apps/api/src/classes/classes.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/commerce/admin/orders",
+    "controller": "CommerceController",
+    "handler": "listApprovalOrders",
+    "source": "apps/api/src/commerce/commerce.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/commerce/admin/orders/{id}/approve",
+    "controller": "CommerceController",
+    "handler": "approveOrder",
+    "source": "apps/api/src/commerce/commerce.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/commerce/admin/orders/{id}/reject",
+    "controller": "CommerceController",
+    "handler": "rejectOrder",
+    "source": "apps/api/src/commerce/commerce.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/commerce/admin/students",
+    "controller": "CommerceController",
+    "handler": "listEligibleStudents",
+    "source": "apps/api/src/commerce/commerce.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/commerce/orders",
+    "controller": "CommerceController",
+    "handler": "listMine",
+    "source": "apps/api/src/commerce/commerce.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/commerce/orders",
+    "controller": "CommerceController",
+    "handler": "createOrder",
+    "source": "apps/api/src/commerce/commerce.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/commerce/orders/{id}",
+    "controller": "CommerceController",
+    "handler": "findMine",
+    "source": "apps/api/src/commerce/commerce.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/commerce/orders/{id}/cancel",
+    "controller": "CommerceController",
+    "handler": "cancelMine",
+    "source": "apps/api/src/commerce/commerce.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/dashboard/school",
+    "controller": "DashboardController",
+    "handler": "getSchoolDashboard",
+    "source": "apps/api/src/dashboard/dashboard.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/dashboard/student",
+    "controller": "DashboardController",
+    "handler": "getStudentDashboard",
+    "source": "apps/api/src/dashboard/dashboard.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/dashboard/teacher",
+    "controller": "DashboardController",
+    "handler": "getTeacherDashboard",
+    "source": "apps/api/src/dashboard/dashboard.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/health",
+    "controller": "HealthController",
+    "handler": "health",
+    "source": "apps/api/src/health.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/health/live",
+    "controller": "HealthController",
+    "handler": "liveness",
+    "source": "apps/api/src/health.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/health/ready",
+    "controller": "HealthController",
+    "handler": "readiness",
+    "source": "apps/api/src/health.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/identity-documents",
+    "controller": "IdentityDocumentsController",
+    "handler": "submit",
+    "source": "apps/api/src/identity/identity.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/identity-documents/{id}/access",
+    "controller": "IdentityDocumentsController",
+    "handler": "accessDocument",
+    "source": "apps/api/src/identity/identity.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/identity-documents/{id}/verify",
+    "controller": "IdentityDocumentsController",
+    "handler": "verify",
+    "source": "apps/api/src/identity/identity.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/identity-documents/me",
+    "controller": "IdentityDocumentsController",
+    "handler": "getMyStatus",
+    "source": "apps/api/src/identity/identity.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/identity-documents/pending",
+    "controller": "IdentityDocumentsController",
+    "handler": "getPending",
+    "source": "apps/api/src/identity/identity.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/identity-documents/upload-url",
+    "controller": "IdentityDocumentsController",
+    "handler": "prepareUpload",
+    "source": "apps/api/src/identity/identity.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/imports",
+    "controller": "ImportsController",
+    "handler": "list",
+    "source": "apps/api/src/imports/imports.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/imports/{id}",
+    "controller": "ImportsController",
+    "handler": "findOne",
+    "source": "apps/api/src/imports/imports.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/imports/students",
+    "controller": "ImportsController",
+    "handler": "createStudentImport",
+    "source": "apps/api/src/imports/imports.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/invitations",
+    "controller": "InvitationsController",
+    "handler": "list",
+    "source": "apps/api/src/invitations/invitations.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/invitations",
+    "controller": "InvitationsController",
+    "handler": "create",
+    "source": "apps/api/src/invitations/invitations.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/invitations/{id}",
+    "controller": "InvitationsController",
+    "handler": "revoke",
+    "source": "apps/api/src/invitations/invitations.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/invitations/accept",
+    "controller": "InvitationsController",
+    "handler": "accept",
+    "source": "apps/api/src/invitations/invitations.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/leads",
+    "controller": "LeadsController",
+    "handler": "getLeads",
+    "source": "apps/api/src/leads/leads.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/leads",
+    "controller": "LeadsController",
+    "handler": "registerSchool",
+    "source": "apps/api/src/leads/leads.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/leads/{id}/status",
+    "controller": "LeadsController",
+    "handler": "updateStatus",
+    "source": "apps/api/src/leads/leads.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/learning/classes",
+    "controller": "LearningController",
+    "handler": "getClasses",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/learning/courses",
+    "controller": "LearningController",
+    "handler": "getCourses",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/learning/courses",
+    "controller": "LearningController",
+    "handler": "createCourse",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/learning/courses/{id}/modules",
+    "controller": "LearningController",
+    "handler": "createModule",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/learning/enrollments/class",
+    "controller": "LearningController",
+    "handler": "enrollClass",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/learning/lessons/{id}/progress",
+    "controller": "LearningController",
+    "handler": "updateProgress",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/learning/materials",
+    "controller": "LearningController",
+    "handler": "getMaterials",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/learning/materials",
+    "controller": "LearningController",
+    "handler": "createMaterial",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/learning/materials/{id}/access",
+    "controller": "LearningController",
+    "handler": "getMaterialAccess",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/learning/modules/{id}/lessons",
+    "controller": "LearningController",
+    "handler": "createLesson",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/learning/programs",
+    "controller": "LearningController",
+    "handler": "getPrograms",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/learning/programs",
+    "controller": "LearningController",
+    "handler": "createProgram",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/learning/tree",
+    "controller": "LearningController",
+    "handler": "getTree",
+    "source": "apps/api/src/learning/learning.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/master-data",
+    "controller": "MasterDataController",
+    "handler": "getOverview",
+    "source": "apps/api/src/master-data/master-data.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/master-data/enrollments",
+    "controller": "MasterDataController",
+    "handler": "enroll",
+    "source": "apps/api/src/master-data/master-data.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/master-data/lists/{resource}",
+    "controller": "MasterDataController",
+    "handler": "list",
+    "source": "apps/api/src/master-data/master-data.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/master-data/parent-links",
+    "controller": "MasterDataController",
+    "handler": "linkParent",
+    "source": "apps/api/src/master-data/master-data.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/master-data/parents/{id}",
+    "controller": "MasterDataController",
+    "handler": "archiveParent",
+    "source": "apps/api/src/master-data/master-data.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/master-data/parents/{id}",
+    "controller": "MasterDataController",
+    "handler": "updateParent",
+    "source": "apps/api/src/master-data/master-data.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/master-data/teacher-assignments",
+    "controller": "MasterDataController",
+    "handler": "assignTeacher",
+    "source": "apps/api/src/master-data/master-data.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/master-data/teachers/{id}",
+    "controller": "MasterDataController",
+    "handler": "archiveTeacher",
+    "source": "apps/api/src/master-data/master-data.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/master-data/teachers/{id}",
+    "controller": "MasterDataController",
+    "handler": "updateTeacher",
+    "source": "apps/api/src/master-data/master-data.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/monitoring/early-warnings",
+    "controller": "MonitoringController",
+    "handler": "listEarlyWarnings",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/backend/monitoring/early-warnings/{id}",
+    "controller": "MonitoringController",
+    "handler": "updateEarlyWarning",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/monitoring/early-warnings/evaluate",
+    "controller": "MonitoringController",
+    "handler": "evaluateEarlyWarnings",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/monitoring/exports",
+    "controller": "MonitoringController",
+    "handler": "listExports",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/monitoring/exports",
+    "controller": "MonitoringController",
+    "handler": "createExport",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/monitoring/exports/{id}/download",
+    "controller": "MonitoringController",
+    "handler": "getExportDownload",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/monitoring/overview",
+    "controller": "MonitoringController",
+    "handler": "getOverview",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/monitoring/public-statistics",
+    "controller": "MonitoringController",
+    "handler": "listPublicStatistics",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/monitoring/public-statistics",
+    "controller": "MonitoringController",
+    "handler": "createPublicStatistic",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/monitoring/public-statistics/{id}/review",
+    "controller": "MonitoringController",
+    "handler": "reviewPublicStatistic",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/monitoring/reports/options",
+    "controller": "MonitoringController",
+    "handler": "getReportOptions",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/monitoring/students/{id}/learning-progress",
+    "controller": "MonitoringController",
+    "handler": "getStudentLearningProgress",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/operations/overview",
+    "controller": "OperationsController",
+    "handler": "overview",
+    "source": "apps/api/src/observability/operations.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/organizations",
+    "controller": "OrganizationsController",
+    "handler": "findAll",
+    "source": "apps/api/src/organizations/organizations.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/organizations",
+    "controller": "OrganizationsController",
+    "handler": "create",
+    "source": "apps/api/src/organizations/organizations.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/organizations/{id}",
+    "controller": "OrganizationsController",
+    "handler": "findOne",
+    "source": "apps/api/src/organizations/organizations.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/organizations/{id}",
+    "controller": "OrganizationsController",
+    "handler": "update",
+    "source": "apps/api/src/organizations/organizations.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/privacy/consent-documents",
+    "controller": "PrivacyController",
+    "handler": "documents",
+    "source": "apps/api/src/privacy/privacy.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/privacy/consents",
+    "controller": "PrivacyController",
+    "handler": "grant",
+    "source": "apps/api/src/privacy/privacy.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/privacy/consents/{id}",
+    "controller": "PrivacyController",
+    "handler": "withdraw",
+    "source": "apps/api/src/privacy/privacy.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/privacy/consents/me",
+    "controller": "PrivacyController",
+    "handler": "myConsents",
+    "source": "apps/api/src/privacy/privacy.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/privacy/data-requests",
+    "controller": "PrivacyController",
+    "handler": "requests",
+    "source": "apps/api/src/privacy/privacy.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/privacy/data-requests",
+    "controller": "PrivacyController",
+    "handler": "createRequest",
+    "source": "apps/api/src/privacy/privacy.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/privacy/data-requests/{id}",
+    "controller": "PrivacyController",
+    "handler": "updateRequest",
+    "source": "apps/api/src/privacy/privacy.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/privacy/data-requests/me",
+    "controller": "PrivacyController",
+    "handler": "myRequests",
+    "source": "apps/api/src/privacy/privacy.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/privacy/subjects",
+    "controller": "PrivacyController",
+    "handler": "subjects",
+    "source": "apps/api/src/privacy/privacy.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/public/analytics/events",
+    "controller": "PublicSupportingController",
+    "handler": "analytics",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/public/certificates/{code}",
+    "controller": "PublicSupportingController",
+    "handler": "certificate",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/public/content",
+    "controller": "PublicSupportingController",
+    "handler": "content",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/public/portfolio/{slug}",
+    "controller": "PublicSupportingController",
+    "handler": "portfolio",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/public/statistics",
+    "controller": "PublicStatisticsController",
+    "handler": "list",
+    "source": "apps/api/src/monitoring/monitoring.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/rubrics",
+    "controller": "RubricsController",
+    "handler": "list",
+    "source": "apps/api/src/rubrics/rubrics.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/rubrics",
+    "controller": "RubricsController",
+    "handler": "create",
+    "source": "apps/api/src/rubrics/rubrics.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/rubrics/{id}",
+    "controller": "RubricsController",
+    "handler": "get",
+    "source": "apps/api/src/rubrics/rubrics.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/rubrics/templates/mgmp",
+    "controller": "RubricsController",
+    "handler": "createMgmpTemplates",
+    "source": "apps/api/src/rubrics/rubrics.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/schools",
+    "controller": "SchoolsController",
+    "handler": "findAll",
+    "source": "apps/api/src/schools/schools.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/schools",
+    "controller": "SchoolsController",
+    "handler": "create",
+    "source": "apps/api/src/schools/schools.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/schools/{id}",
+    "controller": "SchoolsController",
+    "handler": "findOne",
+    "source": "apps/api/src/schools/schools.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/schools/{id}",
+    "controller": "SchoolsController",
+    "handler": "update",
+    "source": "apps/api/src/schools/schools.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/student-store/assignments",
+    "controller": "StudentStoreController",
+    "handler": "assignments",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/student-store/checklist-templates",
+    "controller": "StudentStoreController",
+    "handler": "templates",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/student-store/checklist-templates",
+    "controller": "StudentStoreController",
+    "handler": "createTemplate",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/student-store/files/{id}",
+    "controller": "StudentStoreController",
+    "handler": "deleteFile",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/student-store/files/{id}/access",
+    "controller": "StudentStoreController",
+    "handler": "accessFile",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/student-store/fraud-flags/{id}/resolve",
+    "controller": "StudentStoreController",
+    "handler": "resolveFraud",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/student-store/review/queue",
+    "controller": "StudentStoreController",
+    "handler": "queue",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/student-store/submissions/{id}",
+    "controller": "StudentStoreController",
+    "handler": "getSubmission",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/student-store/submissions/{id}/files",
+    "controller": "StudentStoreController",
+    "handler": "registerFile",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/student-store/submissions/{id}/files/upload-url",
+    "controller": "StudentStoreController",
+    "handler": "prepareFile",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/student-store/submissions/{id}/review",
+    "controller": "StudentStoreController",
+    "handler": "review",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/student-store/submissions/{id}/submit",
+    "controller": "StudentStoreController",
+    "handler": "submit",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/student-store/submissions/draft",
+    "controller": "StudentStoreController",
+    "handler": "saveDraft",
+    "source": "apps/api/src/student-store/student-store.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/students",
+    "controller": "StudentsController",
+    "handler": "findAll",
+    "source": "apps/api/src/students/students.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/students",
+    "controller": "StudentsController",
+    "handler": "create",
+    "source": "apps/api/src/students/students.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/students/{id}",
+    "controller": "StudentsController",
+    "handler": "delete",
+    "source": "apps/api/src/students/students.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/students/{id}",
+    "controller": "StudentsController",
+    "handler": "findOne",
+    "source": "apps/api/src/students/students.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/students/{id}",
+    "controller": "StudentsController",
+    "handler": "update",
+    "source": "apps/api/src/students/students.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/submissions",
+    "controller": "SubmissionsController",
+    "handler": "findAll",
+    "source": "apps/api/src/submissions/submissions.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/submissions",
+    "controller": "SubmissionsController",
+    "handler": "createOrUpdate",
+    "source": "apps/api/src/submissions/submissions.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/submissions/{id}",
+    "controller": "SubmissionsController",
+    "handler": "findOne",
+    "source": "apps/api/src/submissions/submissions.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/submissions/{id}/ai-assessment",
+    "controller": "SubmissionsController",
+    "handler": "createAiAssessment",
+    "source": "apps/api/src/submissions/submissions.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/submissions/{id}/review",
+    "controller": "SubmissionsController",
+    "handler": "review",
+    "source": "apps/api/src/submissions/submissions.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/submissions/{id}/submit",
+    "controller": "SubmissionsController",
+    "handler": "submit",
+    "source": "apps/api/src/submissions/submissions.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/submissions/{id}/videos",
+    "controller": "SubmissionsController",
+    "handler": "addVideo",
+    "source": "apps/api/src/submissions/submissions.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/achievement-definitions",
+    "controller": "SupportingController",
+    "handler": "achievementDefinitions",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/achievements",
+    "controller": "SupportingController",
+    "handler": "achievements",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/achievements",
+    "controller": "SupportingController",
+    "handler": "createAchievement",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/achievements/{id}/award",
+    "controller": "SupportingController",
+    "handler": "awardAchievement",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/analytics/events",
+    "controller": "SupportingController",
+    "handler": "analytics",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/announcements",
+    "controller": "SupportingController",
+    "handler": "announcements",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/announcements",
+    "controller": "SupportingController",
+    "handler": "createAnnouncement",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/announcements/{id}/publish",
+    "controller": "SupportingController",
+    "handler": "publishAnnouncement",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/announcements/manage",
+    "controller": "SupportingController",
+    "handler": "managedAnnouncements",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/certificate-templates",
+    "controller": "SupportingController",
+    "handler": "templates",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/certificate-templates",
+    "controller": "SupportingController",
+    "handler": "createTemplate",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/certificates",
+    "controller": "SupportingController",
+    "handler": "certificates",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/certificates",
+    "controller": "SupportingController",
+    "handler": "issueCertificate",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/certificates/{id}/download",
+    "controller": "SupportingController",
+    "handler": "certificateDownload",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/backend/support/certificates/{id}/publication",
+    "controller": "SupportingController",
+    "handler": "certificatePublication",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/backend/support/certificates/{id}/revoke",
+    "controller": "SupportingController",
+    "handler": "revokeCertificate",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/cms",
+    "controller": "SupportingController",
+    "handler": "cms",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/cms",
+    "controller": "SupportingController",
+    "handler": "createCms",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/cms/{id}/publish",
+    "controller": "SupportingController",
+    "handler": "publishCms",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/helpdesk",
+    "controller": "SupportingController",
+    "handler": "tickets",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/helpdesk",
+    "controller": "SupportingController",
+    "handler": "createTicket",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/helpdesk/{id}",
+    "controller": "SupportingController",
+    "handler": "ticket",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/backend/support/helpdesk/{id}",
+    "controller": "SupportingController",
+    "handler": "updateTicket",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/helpdesk/{id}/attachments",
+    "controller": "SupportingController",
+    "handler": "completeAttachment",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/helpdesk/{id}/attachments/upload-url",
+    "controller": "SupportingController",
+    "handler": "attachmentUpload",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/helpdesk/{id}/messages",
+    "controller": "SupportingController",
+    "handler": "addTicketMessage",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/helpdesk/messages/{messageId}/attachment",
+    "controller": "SupportingController",
+    "handler": "attachment",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/notification-preferences",
+    "controller": "SupportingController",
+    "handler": "preference",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/support/notification-preferences",
+    "controller": "SupportingController",
+    "handler": "updatePreference",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/notifications",
+    "controller": "SupportingController",
+    "handler": "notifications",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/backend/support/notifications/{id}/archive",
+    "controller": "SupportingController",
+    "handler": "archiveNotification",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/backend/support/notifications/{id}/read",
+    "controller": "SupportingController",
+    "handler": "readNotification",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/notifications/read-all",
+    "controller": "SupportingController",
+    "handler": "readAllNotifications",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/portfolio",
+    "controller": "SupportingController",
+    "handler": "portfolio",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "POST",
+    "path": "/api/backend/support/portfolio",
+    "controller": "SupportingController",
+    "handler": "createPortfolio",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "PATCH",
+    "path": "/api/backend/support/portfolio/{id}/publication",
+    "controller": "SupportingController",
+    "handler": "portfolioPublication",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/backend/support/sync-drafts/{key}",
+    "controller": "SupportingController",
+    "handler": "deleteDraft",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/support/sync-drafts/{key}",
+    "controller": "SupportingController",
+    "handler": "draft",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/support/sync-drafts/{key}",
+    "controller": "SupportingController",
+    "handler": "syncDraft",
+    "source": "apps/api/src/supporting/supporting.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/users",
+    "controller": "UsersController",
+    "handler": "findAll",
+    "source": "apps/api/src/users/users.controller.ts"
+  },
+  {
+    "method": "GET",
+    "path": "/api/backend/users/{id}",
+    "controller": "UsersController",
+    "handler": "findOne",
+    "source": "apps/api/src/users/users.controller.ts"
+  },
+  {
+    "method": "PUT",
+    "path": "/api/backend/users/{id}/status",
+    "controller": "UsersController",
+    "handler": "updateStatus",
+    "source": "apps/api/src/users/users.controller.ts"
+  }
+]

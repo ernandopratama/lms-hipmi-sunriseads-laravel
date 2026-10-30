@@ -1,0 +1,12 @@
+# Fallback for shared hosting whose document root is the project folder (e.g. public_html).
+# Prefer pointing the document root at public/; this keeps .env, vendor and storage unreachable either way.
+Options -Indexes
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

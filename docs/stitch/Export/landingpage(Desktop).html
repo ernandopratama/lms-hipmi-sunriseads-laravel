@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sunrise Academy — Laboratorium Niaga Siswa Terstruktur</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "paper": "#F5F8F7",
+            "sheet": "#FFFFFF",
+            "ink": "#17302D",
+            "slate-ink": "#5A6B69",
+            "board": "#2F6F6A",
+            "board-deep": "#235450",
+            "rule": "#D5E0DD",
+            "marigold": "#E9A23B",
+            "pass": "#2E7D4F",
+            "stamp": "#B3412E",
+            "surface-dim": "#c4e0db",
+            "background-light": "#E4F1EE",
+            "inverse-surface": "#1c3532",
+            "inverse-primary": "#ffb959",
+            "inverse-on-surface": "#daf7f1"
+          },
+          fontFamily: {
+            "display": ["Epilogue", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "body-sm": ["Public Sans", "sans-serif"],
+            "body-md": ["Public Sans", "sans-serif"],
+            "body-lg": ["Public Sans", "sans-serif"],
+            "label-sm": ["Public Sans", "sans-serif"],
+            "label-md": ["Public Sans", "sans-serif"]
+          },
+          boxShadow: {
+            "paper": "0 1px 0 #D5E0DD, 0 18px 32px -20px rgba(23, 48, 45, 0.35)",
+            "subtle": "0 1px 3px rgba(23, 48, 45, 0.05)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .graph-paper-bg {
+      background-size: 24px 24px;
+      background-image: 
+        linear-gradient(to right, rgba(213, 224, 221, 0.6) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(213, 224, 221, 0.6) 1px, transparent 1px);
+    }
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink font-body-md antialiased selection:bg-marigold selection:text-ink">
+<!-- ========================================================================= -->
+<!-- Top Navigation (Shared Component Schema: TopNavBar)                       -->
+<!-- ========================================================================= -->
+<header class="sticky top-0 z-50 bg-sheet border-b border-rule w-full transition-colors duration-150">
+<div class="flex justify-between items-center w-full max-w-[1200px] mx-auto px-6 lg:px-12 h-20">
+<!-- Brand Logo / Product Name -->
+<a class="flex items-center gap-3 active:scale-[0.98] transition-transform duration-100" href="#">
+<div class="w-8 h-8 bg-board flex items-center justify-center text-sheet font-display font-bold text-lg">
+          S
+        </div>
+<span class="text-headline-md font-headline-md font-bold tracking-tight text-ink">Sunrise Academy</span>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-ink hover:text-board-deep text-label-md font-label-md transition-colors duration-150 pb-1" href="#program">Program</a>
+<a class="text-board font-semibold border-b-2 border-marigold pb-1 text-label-md font-label-md" href="#alur">Kurikulum</a>
+<a class="text-slate-ink hover:text-board-deep text-label-md font-label-md transition-colors duration-150 pb-1" href="#peran">Peran</a>
+<a class="text-slate-ink hover:text-board-deep text-label-md font-label-md transition-colors duration-150 pb-1" href="#rubrik">Rubrik</a>
+<a class="text-slate-ink hover:text-board-deep text-label-md font-label-md transition-colors duration-150 pb-1" href="#tentang">Tentang Kami</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-3">
+<a class="px-4 py-2.5 text-label-md font-label-md text-ink border border-ink/20 hover:bg-paper transition-colors duration-150 rounded-none active:scale-[0.98]" href="#masuk">
+          Masuk Portal
+        </a>
+<a class="px-5 py-2.5 bg-board text-sheet text-label-md font-label-md hover:bg-board-deep transition-colors duration-150 rounded-none active:scale-[0.98]" href="#form-daftar">
+          Daftar Sekolah
+        </a>
+</div>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- HERO SECTION: 7/5 Asymmetric Split (Fits above fold on compact laptop)   -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 pt-10 pb-16 lg:py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+<!-- Left Column (7 cols) -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<p class="text-label-sm font-label-sm text-board font-semibold mb-3">Laboratorium Niaga Digital Sekolah</p>
+<h1 class="font-display font-extrabold text-ink text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.12] tracking-tight mb-5">
+          Belajar bisnis digital yang benar-benar dipraktikkan murid.
+        </h1>
+<p class="text-slate-ink text-body-lg font-body-lg max-w-[36rem] mb-8 leading-relaxed">
+          Sunrise Academy membantu guru menjalankan pembelajaran berbasis proyek: materi terarah, praktik buka toko, review dengan rubrik transparan, sampai laporan perkembangan instansi.
+        </p>
+<div class="flex flex-wrap items-center gap-5 mb-10">
+<a class="h-12 px-6 bg-board text-sheet font-label-md font-label-md flex items-center justify-center hover:bg-board-deep transition-colors duration-150 active:scale-[0.98]" href="#form-daftar">
+            Ceritakan kebutuhan sekolah
+          </a>
+<a class="text-board-deep font-semibold underline underline-offset-4 hover:text-board transition-colors text-label-md font-label-md" href="#alur">
+            Lihat alur program
+          </a>
+</div>
+<!-- Quiet Fact Line -->
+<div class="pt-6 border-t border-rule w-full flex items-center gap-3">
+<span class="material-symbols-outlined text-board text-[20px]" data-icon="verified_user">verified_user</span>
+<p class="text-slate-ink text-body-sm font-body-sm">
+            Dipakai oleh <span class="font-semibold text-ink">12 sekolah mitra</span> di 3 kota, dengan <span class="font-semibold text-ink">1.400+ tugas praktik</span> direview guru.
+          </p>
+</div>
+</div>
+<!-- Right Column (5 cols): Activity Photo with Overlapping Signature Review Sheet -->
+<div class="lg:col-span-5 relative mt-6 lg:mt-0">
+<div class="relative w-full max-w-[460px] mx-auto">
+<!-- Backing Graph-Paper Matrix Container -->
+<div class="absolute -inset-4 graph-paper-bg rounded-none pointer-events-none -z-10"></div>
+<!-- Classroom Photo Base -->
+<div class="w-full h-80 sm:h-96 overflow-hidden border border-rule bg-sheet">
+<img class="w-full h-full object-cover" data-alt="Indonesian vocational high school students and their teacher wearing neat school uniforms collaborating closely in a bright modern classroom lab. A female teacher points constructively at a student's laptop screen showing an e-commerce dashboard. The ambient daylight streaming through windows highlights clean white walls, minimalist educational furniture, and a focused scholastic atmosphere free from dramatic clutter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9DnvNUHkqbQwJX_f8rdm6jvWz-ARerPuJ1Ezd-UpAU9yQhbLlVNoEwMaWMLbyMQo8uhm7lIUx2iN89MxfQbZrh6n5on0e5P02T3o5qS8CSrSfybrjRdjA1JTmhDXrnOd8KLi842RiexwFcbshc7KtLPIPXe2OuFs9O7wRFhjNDcTW7S-w-ThU-FlAhom5shhTcLkIa1I2eRUxVkhVkoXs-7PrbQUfvXio9GE42Jw"/>
+</div>
+<!-- Signature Review Sheet (Tilted Ledger Sheet) -->
+<div class="absolute -bottom-8 -left-4 sm:-left-8 sm:-bottom-10 w-[92%] sm:w-[360px] bg-sheet p-5 border border-rule shadow-paper -rotate-1 transform transition-transform hover:rotate-0 duration-200">
+<!-- Ledger Header -->
+<div class="flex items-center justify-between pb-3 border-b border-rule">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-board text-[20px]" data-icon="storefront">storefront</span>
+<span class="font-display font-bold text-ink text-sm">Toko produk lokal</span>
+</div>
+<span class="px-2 py-0.5 bg-paper text-slate-ink text-xs font-mono font-medium border border-rule">Draf #04</span>
+</div>
+<!-- Progress Meter -->
+<div class="py-3 border-b border-rule">
+<div class="flex justify-between items-center text-xs mb-1.5">
+<span class="text-slate-ink font-body-sm">Kelengkapan berkas</span>
+<span class="font-semibold text-ink tabular-nums">8 dari 10 bagian</span>
+</div>
+<div class="w-full h-1.5 bg-paper overflow-hidden border border-rule/50">
+<div class="bg-marigold h-full w-[80%]"></div>
+</div>
+</div>
+<!-- Hairline Checklist Rows -->
+<div class="py-2 text-xs space-y-2">
+<div class="flex items-center justify-between py-0.5">
+<span class="text-ink">Profil toko &amp; identitas</span>
+<span class="flex items-center gap-1 text-pass font-medium">
+<span class="material-symbols-outlined text-[16px] text-pass" data-icon="check_circle">check_circle</span>
+                  Lengkap
+                </span>
+</div>
+<div class="flex items-center justify-between py-0.5">
+<span class="text-ink">Foto katalog produk (3 SKU)</span>
+<span class="flex items-center gap-1 text-pass font-medium">
+<span class="material-symbols-outlined text-[16px] text-pass" data-icon="check_circle">check_circle</span>
+                  Lengkap
+                </span>
+</div>
+<div class="flex items-center justify-between py-0.5">
+<span class="text-ink">Kebijakan pengiriman</span>
+<span class="flex items-center gap-1 text-slate-ink font-medium">
+<span class="material-symbols-outlined text-[16px] text-rule" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+                  Belum
+                </span>
+</div>
+</div>
+<!-- Instructor Rubric Note -->
+<div class="mt-2.5 p-2.5 bg-paper border-l-[3px] border-marigold text-xs">
+<p class="text-ink text-[11px] leading-relaxed mb-1">
+<strong class="font-semibold text-ink">Catatan guru:</strong> Foto produk sudah konsisten dengan rasio 1:1. Tambahkan informasi estimasi ekspedisi sebelum submit draf final.
+              </p>
+<div class="flex justify-between text-[10px] text-slate-ink font-mono">
+<span>Bu Dian Lestari, S.Pd.</span>
+<span>14.20 WIB</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 1. GALLERY: Belajar bersama, cerita yang terasa nyata                     -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-16 border-t border-rule" id="program">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<p class="text-slate-ink text-body-sm font-body-sm mb-1">Dokumentasi Praktik Lapangan</p>
+<h2 class="font-display font-extrabold text-ink text-2xl sm:text-3xl tracking-tight">
+          Belajar bersama, cerita yang terasa nyata.
+        </h2>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-label-md font-label-md text-board font-semibold hover:text-board-deep flex items-center gap-1" href="#galeri-arsip">
+          Lihat semua foto
+          <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Gallery Grid 3 Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-sheet border border-rule overflow-hidden flex flex-col group">
+<div class="aspect-[4/3] bg-paper overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" data-alt="A group of Indonesian vocational high school educators and enthusiastic secondary school students gathered inside an academic auditorium. They are holding physical training workbooks and smiling attentively during the launching of digital commerce practicum. The natural school hall lighting illuminates clean pedagogical presentation slides in the background, creating a sincere and disciplined educational atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDstkDf3cjMSvD-iNr0H1_NAgoPL1JDzHBGWQQALzFv-EyatVqX4frj0c-sEUJMTC-5tUGe2JQu9i9Tyc3uuFsaFoCtJRc0pn91evBliLM1G-0V9bQDZvS3d5WBDYIPpx9Degsv8594DP5s2VTSh2AwHbGseHYYF25U2fIjkpL7Y2VSqzu6pU_HIXfW1uyDQm4A-FtDwg6uNQXa5XjR1hdqWsM0K4ssrzldO2kuZGw"/>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<p class="font-display font-bold text-ink text-base mb-1">
+            Bersama membangun masa depan
+          </p>
+<p class="text-slate-ink text-body-sm font-body-sm">
+            SMKN 1 Jakarta — Sesi peresmian lab niaga dan distribusi modul proyek semester.
+          </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-sheet border border-rule overflow-hidden flex flex-col group">
+<div class="aspect-[4/3] bg-paper overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" data-alt="Three focused Indonesian teenage students in clean school uniforms huddled intently around a rugged school laptop in a well-lit library space. One student gestures toward an organized online merchant inventory spreadsheet while the other two write down notes on standard physical review sheets. The lighting is crisp, balanced, and studious, emphasizing genuine vocational teamwork." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRgu63wz0j3Lr3RHuVVKIoGOTkxUnT96VrSwFGJ0X5GrjzYRBP6Hbo_DZR2BL6qkukpa3xP0wUEqtgFGu6-n9Nb8HzTbqTn5NLZZnUg6r0IduWJydr-zL1JT6Rs3FCiYVLhfwq8DklizsmYuaDpK5FrhJLKLYfIUcMdahgUnzTzA_Mi0islSWx25rbAkiI-K-E_Q658pLiPUFpfecUi_UeFzik8EDd18ISq_e8A1E"/>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<p class="font-display font-bold text-ink text-base mb-1">
+            Diskusi yang mematangkan ide kelas
+          </p>
+<p class="text-slate-ink text-body-sm font-body-sm">
+            SMAN 3 Bandung — Menentukan diferensiasi produk kerajinan daerah untuk kanal digital.
+          </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-sheet border border-rule overflow-hidden flex flex-col group">
+<div class="aspect-[4/3] bg-paper overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" data-alt="Close-up scholastic shot of an Indonesian vocational student's hands diligently filling out a printed assessment rubric matrix alongside a tablet device displaying product photography guidelines. Clean wooden study desk, structured geometric layout, natural morning daylight casting gentle sharp shadows, conveying rigorous academic devotion and meticulous craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzqnbBBhgaCKkORXBXqFlG6fuIWw_P00DJUFCAeDut-3S6W2rMAf1AXEN1aBWxu-mCQA3FzBtuL8ZCdu42PzRdFiyA4K0hzbHeK7LuOy1VvifcBC8j4jhwlTzJOMKZKpej71QVVbkayE8yHU86HfgUjm5mJq7j40iFcWV8ZtzsIA5gp5hFkpDWwXN4FXy2s7cG9RRl9UG7R2ecQSatdXuPZWzblw9x61WVSsROxvY"/>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<p class="font-display font-bold text-ink text-base mb-1">
+            Menyusun, mencatat, belajar
+          </p>
+<p class="text-slate-ink text-body-sm font-body-sm">
+            SMKN 2 Yogyakarta — Verifikasi berkas kalkulasi harga pokok penjualan dan margin toko.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 2. LEARNING LOOP: Siklus Belajar & Revisi Terarah                         -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-16 border-t border-rule" id="rubrik">
+<div class="max-w-[42rem] mb-12">
+<p class="text-slate-ink text-body-sm font-body-sm mb-1">Pendekatan Pedagogis</p>
+<h2 class="font-display font-extrabold text-ink text-2xl sm:text-3xl tracking-tight mb-4">
+        Keterampilan tumbuh dari pekerjaan yang selesai, bukan materi yang lewat.
+      </h2>
+<p class="text-slate-ink text-body-md font-body-md">
+        Program digital sering berhenti di video seminar yang ditonton sekilas. Sunrise Academy menyusunnya menjadi siklus laboratorium kerja yang diperiksa nyata.
+      </p>
+</div>
+<!-- Cycle UI with Visual Connector back to Step 2 -->
+<div class="relative bg-sheet border border-rule p-8 lg:p-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="border-b md:border-b-0 md:border-r border-rule pb-6 md:pb-0 md:pr-6">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-8 h-8 bg-paper border border-rule text-ink font-display font-bold flex items-center justify-center text-sm">
+              01
+            </span>
+<span class="font-display font-bold text-ink text-lg">Pahami dasarnya</span>
+</div>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+            Materi ringkas, terstruktur, dan menggunakan studi kasus riil. Disajikan dalam unit kerja 15 menit agar murid tidak bingung harus memulai dari mana.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="border-b md:border-b-0 md:border-r border-rule pb-6 md:pb-0 md:pr-6 relative">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-8 h-8 bg-board text-sheet font-display font-bold flex items-center justify-center text-sm">
+              02
+            </span>
+<span class="font-display font-bold text-ink text-lg">Kerjakan proyeknya</span>
+</div>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+            Murid mengunggah tautan toko, materi foto, deskripsi, atau spreadsheet transaksi. Setiap progres tersimpan sebagai arsip portofolio autentik.
+          </p>
+</div>
+<!-- Step 3 -->
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="w-8 h-8 bg-paper border border-rule text-ink font-display font-bold flex items-center justify-center text-sm">
+              03
+            </span>
+<span class="font-display font-bold text-ink text-lg">Perbaiki dengan arahan</span>
+</div>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed mb-4">
+            Guru memeriksa dengan rubrik standar: murid mengetahui secara transparan aspek apa yang sudah tuntas dan butir mana yang perlu diperbaiki.
+          </p>
+</div>
+</div>
+<!-- Explicit Curved Return Connector (Step 3 -> Step 2 Revisi Loop) -->
+<div class="mt-8 pt-6 border-t border-dashed border-rule flex items-center justify-center">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-paper border border-rule text-xs font-mono text-slate-ink">
+<span class="material-symbols-outlined text-marigold text-[18px]" data-icon="replay">replay</span>
+<span>Siklus Revisi Terarah: Draf dikembalikan ke Tahap 02 sebelum nilai dikunci resmi</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 3. FEATURE ROWS: 5/7 Asymmetric Tabular Rows                              -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-16 border-t border-rule">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+<!-- Left Column (5 cols) -->
+<div class="lg:col-span-5 sticky top-28">
+<p class="text-slate-ink text-body-sm font-body-sm mb-1">Instrumen Terkelola</p>
+<h2 class="font-display font-extrabold text-ink text-2xl sm:text-3xl tracking-tight mb-4">
+          Cukup lengkap untuk program sekolah. Tetap sederhana untuk dipakai setiap hari.
+        </h2>
+<p class="text-slate-ink text-body-md font-body-md">
+          Setiap instrumen dirancang tanpa dekorasi berlebih. Guru tidak dituntut menjadi ahli teknis server, dan murid tidak terbebani menu yang membingungkan.
+        </p>
+</div>
+<!-- Right Column (7 cols): 6 Hairline Separated Tabular Rows -->
+<div class="lg:col-span-7 divide-y divide-rule border-y border-rule">
+<!-- Row 1 -->
+<div class="py-5 flex items-start gap-4 hover:bg-sheet/50 transition-colors">
+<div class="mt-0.5 text-board flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="menu_book">menu_book</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-ink text-base mb-1">Ruang belajar</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+              Modul, materi, lembar kerja, tenggat, dan status verifikasi berada dalam satu urutan logis yang mudah diikuti tanpa distrasi.
+            </p>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="py-5 flex items-start gap-4 hover:bg-sheet/50 transition-colors">
+<div class="mt-0.5 text-board flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="inventory_2">inventory_2</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-ink text-base mb-1">Pekerjaan murid</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+              Toko digital dan konten promosi dinilai sebagai proses bertahap, bukan sekadar tangkapan layar tunggal di akhir semester.
+            </p>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="py-5 flex items-start gap-4 hover:bg-sheet/50 transition-colors">
+<div class="mt-0.5 text-board flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="rate_review">rate_review</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-ink text-base mb-1">Review guru</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+              Rubrik kualitatif, catatan baris, riwayat pengembalian tugas, dan skor tersimpan otomatis dalam audit trail yang rapi.
+            </p>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="py-5 flex items-start gap-4 hover:bg-sheet/50 transition-colors">
+<div class="mt-0.5 text-board flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-ink text-base mb-1">Pandangan instansi</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+              Sekolah memantau partisipasi siswa, rasio tugas yang sudah dinilai, dan kelas yang membutuhkan supervisi pengawas.
+            </p>
+</div>
+</div>
+<!-- Row 5 -->
+<div class="py-5 flex items-start gap-4 hover:bg-sheet/50 transition-colors">
+<div class="mt-0.5 text-board flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="table_chart">table_chart</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-ink text-base mb-1">Laporan yang siap dipakai</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+              Ekspor rekapitulasi data nilai format CSV/Excel siap diintegrasikan dengan buku nilai kurikulum merdeka maupun sistem dapodik.
+            </p>
+</div>
+</div>
+<!-- Row 6 -->
+<div class="py-5 flex items-start gap-4 hover:bg-sheet/50 transition-colors">
+<div class="mt-0.5 text-board flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="badge">badge</span>
+</div>
+<div>
+<h3 class="font-display font-bold text-ink text-base mb-1">Akses sesuai peran</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+              Murid, guru mapel, wali kelas, orang tua, dan kepala sekolah masuk dengan hak otorisasi yang terpisah secara ketat.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 4. ROLLOUT TIMELINE: 4 Nodes on a Horizontal Axis                        -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-16 border-t border-rule" id="alur">
+<div class="max-w-[40rem] mb-12">
+<p class="text-slate-ink text-body-sm font-body-sm mb-1">Implementasi Sekolah</p>
+<h2 class="font-display font-extrabold text-ink text-2xl sm:text-3xl tracking-tight mb-3">
+        Teknologi mengikuti cara sekolah bekerja.
+      </h2>
+<p class="text-slate-ink text-body-md font-body-md">
+        Mulai kecil dari satu kelas percontohan atau langsung serentak lintas jurusan kejuruan. Garis pandu program tetap konsisten.
+      </p>
+</div>
+<!-- Horizontal Timeline Container -->
+<div class="relative pt-6">
+<!-- Continuous Axis Line -->
+<div class="hidden md:block absolute top-[39px] left-0 right-0 h-[2px] bg-rule z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+<!-- Node 1 -->
+<div class="flex flex-col">
+<div class="w-10 h-10 bg-sheet border-2 border-board text-board font-display font-bold text-base flex items-center justify-center mb-5 self-start shadow-sm">
+            1
+          </div>
+<h3 class="font-display font-bold text-ink text-lg mb-2">Tentukan ruang lingkup</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+            Sekolah memilih kelas peserta, guru pembimbing, target semester, dan platform niaga digital yang disepakati bersama.
+          </p>
+</div>
+<!-- Node 2 -->
+<div class="flex flex-col">
+<div class="w-10 h-10 bg-sheet border-2 border-board text-board font-display font-bold text-base flex items-center justify-center mb-5 self-start shadow-sm">
+            2
+          </div>
+<h3 class="font-display font-bold text-ink text-lg mb-2">Siapkan pembelajaran</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+            Guru mengaktifkan template silabus, checklist verifikasi produk, serta rubrik pembobotan yang telah terstandar.
+          </p>
+</div>
+<!-- Node 3 -->
+<div class="flex flex-col">
+<div class="w-10 h-10 bg-sheet border-2 border-board text-board font-display font-bold text-base flex items-center justify-center mb-5 self-start shadow-sm">
+            3
+          </div>
+<h3 class="font-display font-bold text-ink text-lg mb-2">Jalankan proyek</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+            Siswa membuka etalase toko, mengunggah dokumentasi operasional, dan menerima catatan korektif dari guru secara bertahap.
+          </p>
+</div>
+<!-- Node 4 -->
+<div class="flex flex-col">
+<div class="w-10 h-10 bg-sheet border-2 border-board text-board font-display font-bold text-base flex items-center justify-center mb-5 self-start shadow-sm">
+            4
+          </div>
+<h3 class="font-display font-bold text-ink text-lg mb-2">Baca perkembangannya</h3>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+            Sekolah memperoleh rekapitulasi data capaian kompetensi, kesiapan wirausaha murid, serta portofolio karya digital.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 5. ROLE SWITCHER: High-Contrast Inverted Dark Container (#17302D)        -->
+<!-- ========================================================================= -->
+<section class="w-full bg-ink text-paper py-20" id="peran">
+<div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+<div class="max-w-[42rem] mb-10">
+<p class="text-marigold text-label-sm font-label-sm mb-2 font-mono">Arsitektur Peran Terpisah</p>
+<h2 class="font-display font-extrabold text-paper text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight">
+          Setiap orang melihat bagian yang memang menjadi tanggung jawabnya.
+        </h2>
+</div>
+<!-- Ledger Role Tabs (Vanilla JS powered) -->
+<div class="flex border-b border-slate-ink/40 gap-4 sm:gap-8 overflow-x-auto pb-px" id="role-tabs">
+<button class="role-tab pb-3 text-sm sm:text-base font-semibold text-paper border-b-2 border-marigold transition-colors whitespace-nowrap" id="tab-murid" onclick="setRole('murid')">
+          Murid
+        </button>
+<button class="role-tab pb-3 text-sm sm:text-base font-semibold text-slate-ink hover:text-paper border-b-2 border-transparent transition-colors whitespace-nowrap" id="tab-guru" onclick="setRole('guru')">
+          Guru
+        </button>
+<button class="role-tab pb-3 text-sm sm:text-base font-semibold text-slate-ink hover:text-paper border-b-2 border-transparent transition-colors whitespace-nowrap" id="tab-orangtua" onclick="setRole('orangtua')">
+          Orang tua
+        </button>
+<button class="role-tab pb-3 text-sm sm:text-base font-semibold text-slate-ink hover:text-paper border-b-2 border-transparent transition-colors whitespace-nowrap" id="tab-instansi" onclick="setRole('instansi')">
+          Instansi
+        </button>
+</div>
+<!-- Role Description Banner -->
+<div class="py-6 border-b border-slate-ink/30 mb-8">
+<p class="text-paper text-body-lg font-body-lg font-medium" id="role-desc">
+          Tahu apa yang harus dikerjakan, apa yang belum lengkap, dan bagaimana memperbaikinya.
+        </p>
+</div>
+<!-- Dashboard Simulation Surface (Flat Technical Window) -->
+<div class="bg-[#1C3532] border border-slate-ink/40 p-6 lg:p-8">
+<div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-ink/30 text-xs text-slate-ink font-mono">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-marigold"></span>
+<span class="text-paper uppercase tracking-wider" id="role-workspace-tag">Ruang Kerja Murid — Kelas XI Bisnis Daring</span>
+</div>
+<span>Sesi Aktif: Semester Genap 2024/2025</span>
+</div>
+<!-- Dynamic Role Preview Area -->
+<div id="role-preview-content">
+<!-- Content populated via JavaScript function -->
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 6. SHOWCASE REVIEW SHEET: Signature Surface Walkthrough                  -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-16 border-t border-rule">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left (5 cols) -->
+<div class="lg:col-span-5">
+<p class="text-slate-ink text-body-sm font-body-sm mb-1">Spesifikasi Penilaian</p>
+<h2 class="font-display font-extrabold text-ink text-2xl sm:text-3xl tracking-tight mb-4">
+          Membangun toko digital, langkah demi langkah.
+        </h2>
+<p class="text-slate-ink text-body-md font-body-md mb-8 leading-relaxed">
+          Murid tidak diminta sekadar mengunggah tautan tanpa panduan. Kami mengurai parameter teknis sebuah toko daring menjadi checklist objektif yang mudah diperiksa guru.
+        </p>
+<!-- Vertical Process Steps -->
+<div class="space-y-4 border-l-2 border-rule pl-4">
+<div class="relative">
+<span class="font-display font-bold text-ink text-sm block">01. Brief dan pilihan platform</span>
+<span class="text-slate-ink text-body-sm font-body-sm">Menentukan target ceruk pasar, nama entitas usaha, dan pemilihan kanal marketplace.</span>
+</div>
+<div class="relative">
+<span class="font-display font-bold text-ink text-sm block">02. Profil toko dan produk</span>
+<span class="text-slate-ink text-body-sm font-body-sm">Penyusunan copywriting deskripsi etalase dan tata letak banner resmi berstandar industri.</span>
+</div>
+<div class="relative">
+<span class="font-display font-bold text-ink text-sm block">03. Bukti operasional</span>
+<span class="text-slate-ink text-body-sm font-body-sm">Verifikasi simulasi perhitungan ongkir, pengaturan kurir, dan kesiapan kemasan paket.</span>
+</div>
+<div class="relative">
+<span class="font-display font-bold text-ink text-sm block">04. Review dan kesempatan revisi</span>
+<span class="text-slate-ink text-body-sm font-body-sm">Evaluasi komprehensif menggunakan matriks rubrik guru dengan catatan terperinci.</span>
+</div>
+</div>
+</div>
+<!-- Right (7 cols): Full Sized Signature Review Sheet Component -->
+<div class="lg:col-span-7">
+<div class="bg-sheet border border-rule shadow-paper p-6 sm:p-8">
+<!-- Sheet Header Bar -->
+<div class="flex items-center justify-between pb-4 border-b border-rule">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-board text-[24px]" data-icon="assignment">assignment</span>
+<div>
+<h4 class="font-display font-bold text-ink text-base">Tugas Praktik: Toko Produk Lokal</h4>
+<p class="text-slate-ink text-xs font-mono">Modul 03 — Kelompok 4 (SMKN 1 Jakarta)</p>
+</div>
+</div>
+<div class="px-2.5 py-1 bg-paper border border-rule text-ink text-xs font-semibold">
+              Status: Evaluasi Berjalan
+            </div>
+</div>
+<!-- Progress Bar & Counter -->
+<div class="py-5 border-b border-rule">
+<div class="flex justify-between items-center text-xs mb-2">
+<span class="font-display font-bold text-ink">Indikator Pemenuhan Standar</span>
+<span class="font-mono text-ink font-semibold">8 dari 10 Bagian Lengkap</span>
+</div>
+<div class="w-full h-2 bg-paper border border-rule overflow-hidden">
+<div class="bg-marigold h-full w-[80%]"></div>
+</div>
+</div>
+<!-- Checklist Rows -->
+<div class="divide-y divide-rule text-sm">
+<div class="py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pass text-[20px]" data-icon="check_box">check_box</span>
+<span class="text-ink font-medium">URL toko dapat dibuka dan terverifikasi</span>
+</div>
+<span class="text-pass text-xs font-semibold">Selesai</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pass text-[20px]" data-icon="check_box">check_box</span>
+<span class="text-ink font-medium">Minimal lima produk aktif dengan foto orisinal</span>
+</div>
+<span class="text-pass text-xs font-semibold">Selesai</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pass text-[20px]" data-icon="check_box">check_box</span>
+<span class="text-ink font-medium">Deskripsi produk mencantumkan bahan &amp; spesifikasi</span>
+</div>
+<span class="text-pass text-xs font-semibold">Selesai</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-stamp text-[20px]" data-icon="indeterminate_check_box">indeterminate_check_box</span>
+<span class="text-ink font-medium">Bukti simulasi pengiriman pertama tersimpan</span>
+</div>
+<span class="text-stamp text-xs font-semibold">Perlu Revisi</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-ink/50 text-[20px]" data-icon="check_box_outline_blank">check_box_outline_blank</span>
+<span class="text-slate-ink">Pengaturan rekening escrow sekolah</span>
+</div>
+<span class="text-slate-ink text-xs">Menunggu</span>
+</div>
+</div>
+<!-- Official Instructor Note Annotation -->
+<div class="mt-6 p-4 bg-paper border-l-4 border-marigold">
+<div class="flex items-center justify-between text-xs text-slate-ink font-mono mb-1.5">
+<span class="font-bold text-ink">Catatan Resmi Pembimbing</span>
+<span>12 Nov 2024 • 15:45 WIB</span>
+</div>
+<p class="text-ink text-body-sm font-body-sm">
+              "Katalog sudah rapi dan visual pencahayaan foto produk sangat layak. Namun simulasi resi ekspedisi belum mencantumkan berat kemasan sekunder. Harap lakukan penimbangan ulang dan lampirkan buktinya."
+            </p>
+<div class="mt-2 text-xs font-semibold text-board">
+              Drs. Bambang Sudarsono — Guru Pengampu PKWU
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 7. SECURITY & TRUST: Tata Kelola Data Sekolah                             -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-16 border-t border-rule">
+<div class="flex items-center gap-2 mb-2 text-board">
+<span class="material-symbols-outlined text-[20px]" data-icon="lock">lock</span>
+<span class="text-label-sm font-label-sm font-semibold">Kerahasiaan &amp; Tata Kelola</span>
+</div>
+<h2 class="font-display font-extrabold text-ink text-2xl sm:text-3xl tracking-tight mb-4">
+      Aman bukan berarti rumit bagi pengguna.
+    </h2>
+<p class="text-slate-ink text-body-md font-body-md max-w-[38rem] mb-10">
+      Kontrol keamanan berjalan tertib di belakang layar: sementara setiap peran tetap mendapat pengalaman belajar yang sederhana dan fokus.
+    </p>
+<!-- 2-Column Hairline Checklist -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 divide-y md:divide-y-0 divide-rule border-t border-b border-rule">
+<!-- Col 1 -->
+<div class="divide-y divide-rule">
+<div class="py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-board text-[20px]" data-icon="verified">verified</span>
+<span class="text-ink font-medium text-body-sm">Hak akses mengikuti peran dan sekolah terdaftar</span>
+</div>
+<div class="py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-board text-[20px]" data-icon="verified">verified</span>
+<span class="text-ink font-medium text-body-sm">Dokumen identitas murid disimpan dalam enkripsi privat</span>
+</div>
+<div class="py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-board text-[20px]" data-icon="verified">verified</span>
+<span class="text-ink font-medium text-body-sm">Persetujuan tertulis orang tua tercatat dalam sistem</span>
+</div>
+</div>
+<!-- Col 2 -->
+<div class="divide-y divide-rule">
+<div class="py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-board text-[20px]" data-icon="verified">verified</span>
+<span class="text-ink font-medium text-body-sm">Data antarorganisasi sekolah terisolasi penuh</span>
+</div>
+<div class="py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-board text-[20px]" data-icon="verified">verified</span>
+<span class="text-ink font-medium text-body-sm">Nomor Induk Kependudukan (NIK) tidak diekspos sembarangan</span>
+</div>
+<div class="py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-board text-[20px]" data-icon="verified">verified</span>
+<span class="text-ink font-medium text-body-sm">Setiap perubahan nilai terekam dalam jejak audit</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 8. CTA BAND: Compact Strip on Light Teal (#E4F1EE)                       -->
+<!-- ========================================================================= -->
+<section class="w-full bg-[#E4F1EE] border-y border-rule py-12">
+<div class="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+<div>
+<h3 class="font-display font-extrabold text-ink text-2xl tracking-tight mb-1">
+          Ceritakan program yang ingin sekolah Anda jalankan.
+        </h3>
+<p class="text-slate-ink text-body-sm font-body-sm">
+          Kami mendampingi perancangan uji coba kelas perdana tanpa biaya awal.
+        </p>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0">
+<a class="h-12 px-6 bg-board text-sheet font-label-md font-label-md flex items-center justify-center hover:bg-board-deep transition-colors duration-150 active:scale-[0.98]" href="#form-daftar">
+          Hubungi tim kami
+        </a>
+<a class="text-board-deep font-semibold underline underline-offset-4 hover:text-board transition-colors text-label-md font-label-md" href="#masuk">
+          Sudah punya akun? Masuk
+        </a>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 9. TEAM: Orang-orang yang menggerakkan Sunrise Academy                    -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-16 border-b border-rule" id="tentang">
+<div class="max-w-[42rem] mb-12">
+<p class="text-slate-ink text-body-sm font-body-sm mb-1">Struktur Pengelola</p>
+<h2 class="font-display font-extrabold text-ink text-2xl sm:text-3xl tracking-tight mb-3">
+        Orang-orang yang menggerakkan Sunrise Academy.
+      </h2>
+<p class="text-slate-ink text-body-md font-body-md">
+        Kombinasi praktisi niaga digital, pengembang teknologi pendidikan, dan mentor kejuruan yang berpengalaman di lapangan.
+      </p>
+</div>
+<!-- Row 1: Founders with Photos -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<!-- Founder 1 -->
+<div class="bg-sheet border border-rule p-5 flex items-center gap-5">
+<div class="w-20 h-20 bg-paper border border-rule flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Formal executive headshot portrait of an Indonesian male professional in his late thirties wearing an ironed dark navy blazer over a clean collared shirt. Soft studio natural lighting, neutral minimalist backdrop, confident scholastic expression, representing leadership in vocational digital education." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7BPBh9uM1qUUREqgGaaQRyYELQxf25-0No6PlGNvINtZ2pdLuXinIpjucC5gLuRV5DDGu3YPSMn1oYIQdNtRtCE3RgZ8f1IZm4PyJFQF14b7a6HnvTm3Ipy8Tj3gM_2nVNf4RQAioO-1dp5jrmAmF7Ftgbx9gdbEY8ZpDdSWZ1OxzXBcg0NCXifwNQZi6rhfBB2xDomVqbbEZSVOEs5fEoHqJ7w-TJ9B5dqb1f6I"/>
+</div>
+<div>
+<h3 class="font-display font-bold text-ink text-lg">Surya Indra Permana, S.Kom</h3>
+<p class="text-board font-medium text-xs uppercase tracking-wider mb-1">Chief Executive Officer</p>
+<p class="text-slate-ink text-body-sm font-body-sm">
+            Praktisi ekosistem niaga digital sejak 2014, mengawal integrasi kurikulum vokasi dengan platform industri.
+          </p>
+</div>
+</div>
+<!-- Founder 2 -->
+<div class="bg-sheet border border-rule p-5 flex items-center gap-5">
+<div class="w-20 h-20 bg-paper border border-rule flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Friendly professional portrait of an Indonesian male educational leader in his thirties wearing smart business attire. Balanced high-key soft daylight, crisp light neutral background, thoughtful engaging expression reflecting operational competence in vocational school partnerships." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-4PrVxr2SBrwAA4t1cLKPdUTvkvbgOjPdpXugLwyPTsvf4PiYl4svnYUj7dHZkTs9Ko8bI73xak--sFZXBxfTT8LUnXeCKWvhks0Sk4jE8z6xzekBkSJHzluhbJ0TGh9e4-GjmdzWCBi5GYkLWd5JU14DWXVlWdPEMBhe2MfNil5L-hnJ3EIPsEFz0cOlSzeoMgzVrcvIDjiBMuV5Ylh_vqsToHXJxc1DNDOkb-s"/>
+</div>
+<div>
+<h3 class="font-display font-bold text-ink text-lg">Hendi Suryo Leksono, S.E., M.M.</h3>
+<p class="text-board font-medium text-xs uppercase tracking-wider mb-1">Chief Operating Officer</p>
+<p class="text-slate-ink text-body-sm font-body-sm">
+            Spesialis tata kelola operasional sekolah dan sinkronisasi pelatihan guru kejuruan bersertifikasi.
+          </p>
+</div>
+</div>
+</div>
+<!-- Row 2: Mentors & IT Team with Paper Initial Avatars -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Member 1 -->
+<div class="bg-sheet border border-rule p-5 flex items-center gap-4">
+<div class="w-14 h-14 bg-paper border border-rule text-ink font-display font-bold text-lg flex items-center justify-center flex-shrink-0">
+          NP
+        </div>
+<div>
+<h4 class="font-display font-bold text-ink text-base">Nabila Putri Restaningsih</h4>
+<p class="text-board font-medium text-xs">Mentor Lapangan Niaga</p>
+<p class="text-slate-ink text-xs mt-0.5">Pendampingan optimasi katalog &amp; riset tren pasar.</p>
+</div>
+</div>
+<!-- Member 2 -->
+<div class="bg-sheet border border-rule p-5 flex items-center gap-4">
+<div class="w-14 h-14 bg-paper border border-rule text-ink font-display font-bold text-lg flex items-center justify-center flex-shrink-0">
+          LB
+        </div>
+<div>
+<h4 class="font-display font-bold text-ink text-base">Lutfhan Bayu Zulkarnain</h4>
+<p class="text-board font-medium text-xs">Mentor &amp; CMO</p>
+<p class="text-slate-ink text-xs mt-0.5">Strategi pemasaran konten &amp; aktivasi kampanye digital.</p>
+</div>
+</div>
+<!-- Member 3 -->
+<div class="bg-sheet border border-rule p-5 flex items-center gap-4">
+<div class="w-14 h-14 bg-paper border border-rule text-ink font-display font-bold text-lg flex items-center justify-center flex-shrink-0">
+          EJ
+        </div>
+<div>
+<h4 class="font-display font-bold text-ink text-base">Ernando Jamuar Pratama</h4>
+<p class="text-board font-medium text-xs">Tim Pengembang Sistem IT</p>
+<p class="text-slate-ink text-xs mt-0.5">Arsitektur basis data, keamanan platform &amp; performa lab.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 10. PUBLIC STATISTICS: Ringkasan Privasi Terverifikasi                     -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-10">
+<div class="bg-sheet border border-rule p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+<!-- Left side note -->
+<div class="max-w-[34rem]">
+<div class="flex items-center gap-2 text-xs font-mono text-slate-ink mb-1">
+<span class="w-2 h-2 bg-pass inline-block"></span>
+<span>Dampak Terverifikasi &amp; Perlindungan Privasi</span>
+</div>
+<h4 class="font-display font-bold text-ink text-lg mb-1">
+          Angka yang boleh dilihat publik, tanpa mengorbankan privasi.
+        </h4>
+<p class="text-slate-ink text-body-sm font-body-sm leading-relaxed">
+          Hanya ringkasan yang sudah ditinjau dan memenuhi ambang batas minimum peserta yang dapat tampil di halaman publik instansi.
+        </p>
+</div>
+<!-- Right side status indicator -->
+<div class="p-4 bg-paper border border-rule text-center md:text-right min-w-[280px]">
+<div class="flex items-center justify-center md:justify-end gap-2 text-slate-ink text-xs font-mono mb-1">
+<span class="material-symbols-outlined text-[16px] text-board" data-icon="lock_clock">lock_clock</span>
+<span>Ambang Kuantitas Terlindungi</span>
+</div>
+<p class="text-ink text-xs leading-normal">
+          Data agregat publik diperbarui tiap akhir kuartal kalender akademik.
+        </p>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 11. LEAD FORM: Tidak perlu menyiapkan proposal panjang                   -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-16 border-t border-rule" id="form-daftar">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Form Presentation Card (7 cols) -->
+<div class="lg:col-span-7 bg-sheet border border-rule shadow-paper p-8">
+<h3 class="font-display font-extrabold text-ink text-2xl tracking-tight mb-2">
+          Tidak perlu menyiapkan proposal panjang.
+        </h3>
+<p class="text-slate-ink text-body-sm font-body-sm mb-6">
+          Isi formulir ringkas di bawah. Tim kurikulum kami akan merespons dalam waktu 1 hari kerja untuk menyusun kerangka pilot program.
+        </p>
+<form class="space-y-4" onsubmit="event.preventDefault(); alert('Terima kasih. Formulir kebutuhan sekolah Anda telah diterima. Tim kami akan menghubungi via WhatsApp.');">
+<div>
+<label class="block text-slate-ink text-label-sm font-label-sm mb-1.5" for="nama">Nama Lengkap</label>
+<input class="w-full bg-sheet border border-rule text-ink p-3 text-sm focus:border-board focus:ring-1 focus:ring-board outline-none rounded-none" id="nama" placeholder="Contoh: Dian Lestari, S.Pd." required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-slate-ink text-label-sm font-label-sm mb-1.5" for="instansi">Instansi / Nama Sekolah</label>
+<input class="w-full bg-sheet border border-rule text-ink p-3 text-sm focus:border-board focus:ring-1 focus:ring-board outline-none rounded-none" id="instansi" placeholder="Contoh: SMKN 1 Jakarta" required="" type="text"/>
+</div>
+<div>
+<label class="block text-slate-ink text-label-sm font-label-sm mb-1.5" for="peran-input">Peran di Sekolah</label>
+<select class="w-full bg-sheet border border-rule text-ink p-3 text-sm focus:border-board focus:ring-1 focus:ring-board outline-none rounded-none" id="peran-input">
+<option>Guru / Koordinator Jurusan</option>
+<option>Kepala Sekolah / Wakil</option>
+<option>Pengawas Sekolah / Dinas</option>
+<option>Lainnya</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-slate-ink text-label-sm font-label-sm mb-1.5" for="wa">Nomor WhatsApp Aktif</label>
+<input class="w-full bg-sheet border border-rule text-ink p-3 text-sm focus:border-board focus:ring-1 focus:ring-board outline-none rounded-none" id="wa" placeholder="Contoh: 081234567890" required="" type="tel"/>
+<span class="text-xs text-slate-ink mt-1 block">Diawali dengan 08 atau +62 untuk koordinasi jadwal diskusi awal.</span>
+</div>
+<div>
+<label class="block text-slate-ink text-label-sm font-label-sm mb-1.5" for="kebutuhan">Kebutuhan atau Target Program</label>
+<textarea class="w-full bg-sheet border border-rule text-ink p-3 text-sm focus:border-board focus:ring-1 focus:ring-board outline-none rounded-none resize-none" id="kebutuhan" placeholder="Contoh: Program praktik bisnis daring untuk 2 kelas jurusan Manajemen Logistik selama 8 minggu." rows="3"></textarea>
+</div>
+<button class="w-full h-12 bg-board text-sheet font-label-md font-label-md flex items-center justify-center hover:bg-board-deep transition-colors duration-150 active:scale-[0.98] mt-2 rounded-none" type="submit">
+            Kirim kebutuhan sekolah
+          </button>
+</form>
+</div>
+<!-- Explanatory Context (5 cols) -->
+<div class="lg:col-span-5 pt-4">
+<h4 class="font-display font-bold text-ink text-lg mb-4">
+          Apa yang terjadi setelah mengirim?
+        </h4>
+<div class="space-y-6">
+<div class="flex items-start gap-3">
+<span class="w-6 h-6 bg-paper border border-rule text-board font-mono font-bold text-xs flex items-center justify-center mt-0.5 flex-shrink-0">1</span>
+<div>
+<p class="font-semibold text-ink text-sm">Respons cepat via WhatsApp</p>
+<p class="text-slate-ink text-body-sm font-body-sm">Tim kurikulum kami akan menghubungi kontak penanggung jawab untuk menjadwalkan temu daring 20 menit.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-6 h-6 bg-paper border border-rule text-board font-mono font-bold text-xs flex items-center justify-center mt-0.5 flex-shrink-0">2</span>
+<div>
+<p class="font-semibold text-ink text-sm">Penyusunan kerangka kelas pilot</p>
+<p class="text-slate-ink text-body-sm font-body-sm">Kami memetakan kebutuhan rubrik yang relevan dengan jam pelajaran produktif atau mata pelajaran PKWU sekolah Anda.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="w-6 h-6 bg-paper border border-rule text-board font-mono font-bold text-xs flex items-center justify-center mt-0.5 flex-shrink-0">3</span>
+<div>
+<p class="font-semibold text-ink text-sm">Konsultasi tanpa ikatan</p>
+<p class="text-slate-ink text-body-sm font-body-sm">Semua sesi telaah silabus dan pengenalan laboratorium tidak memungut komitmen biaya awal.</p>
+</div>
+</div>
+</div>
+<!-- Institutional Trust Seal Box -->
+<div class="mt-10 p-5 bg-sheet border border-rule">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-board text-[28px]" data-icon="policy">policy</span>
+<div>
+<p class="text-xs font-bold text-ink">PT Laboratorium Niaga Siswa</p>
+<p class="text-xs text-slate-ink">Terdaftar resmi sebagai mitra pengembang teknologi vokasi.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 12. FAQ: Pertanyaan yang Sering Diajukan                                  -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 py-16 border-t border-rule">
+<div class="max-w-[42rem] mb-10">
+<p class="text-slate-ink text-body-sm font-body-sm mb-1">Informasi Operasional</p>
+<h2 class="font-display font-extrabold text-ink text-2xl sm:text-3xl tracking-tight mb-3">
+        Tanya jawab seputar implementasi sekolah.
+      </h2>
+<p class="text-slate-ink text-body-md font-body-md">
+        Hal-hal penting yang biasa ditanyakan oleh kepala sekolah, bendahara komite, dan guru pembimbing.
+      </p>
+</div>
+<!-- 5 Hairline Accordions -->
+<div class="divide-y divide-rule border-y border-rule">
+<!-- Item 1 -->
+<details class="group py-5 cursor-pointer">
+<summary class="flex justify-between items-center list-none select-none">
+<h4 class="font-display font-bold text-ink text-base group-hover:text-board transition-colors pr-4">
+            Apakah Sunrise Academy menggantikan kurikulum sekolah yang sudah ada?
+          </h4>
+<span class="material-symbols-outlined text-slate-ink group-open:rotate-180 transition-transform duration-200" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-3 text-slate-ink text-body-sm font-body-sm leading-relaxed pr-8">
+          Tidak. Sunrise Academy bertindak sebagai laboratorium pelengkap untuk mata pelajaran Produk Kreatif dan Kewirausahaan (PKWU) atau mata pelajaran kejuruan niaga. Lembar tugas dan rubrik penilaian kami dapat langsung disinkronkan ke dalam capaian pembelajaran semester resmi sekolah.
+        </p>
+</details>
+<!-- Item 2 -->
+<details class="group py-5 cursor-pointer">
+<summary class="flex justify-between items-center list-none select-none">
+<h4 class="font-display font-bold text-ink text-base group-hover:text-board transition-colors pr-4">
+            Bagaimana guru membagi waktu untuk mereview tugas murid?
+          </h4>
+<span class="material-symbols-outlined text-slate-ink group-open:rotate-180 transition-transform duration-200" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-3 text-slate-ink text-body-sm font-body-sm leading-relaxed pr-8">
+          Sistem review kami menggunakan template butir objektif (checklist) dan catatan ringkas, bukan esai panjang. Rata-rata guru hanya membutuhkan waktu 2 hingga 3 menit per berkas proyek murid karena parameter kelengkapan teknis sudah tervalidasi otomatis oleh sistem.
+        </p>
+</details>
+<!-- Item 3 -->
+<details class="group py-5 cursor-pointer">
+<summary class="flex justify-between items-center list-none select-none">
+<h4 class="font-display font-bold text-ink text-base group-hover:text-board transition-colors pr-4">
+            Perangkat apa saja yang dibutuhkan oleh murid dan sekolah?
+          </h4>
+<span class="material-symbols-outlined text-slate-ink group-open:rotate-180 transition-transform duration-200" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-3 text-slate-ink text-body-sm font-body-sm leading-relaxed pr-8">
+          Aplikasi berjalan melalui peramban web standar (Chrome, Firefox, Safari) dan dioptimalkan untuk komputer lab sekolah serta ponsel pintar standar Android/iOS dengan konsumsi kuota data yang sangat hemat.
+        </p>
+</details>
+<!-- Item 4 -->
+<details class="group py-5 cursor-pointer">
+<summary class="flex justify-between items-center list-none select-none">
+<h4 class="font-display font-bold text-ink text-base group-hover:text-board transition-colors pr-4">
+            Apakah data murid aman dan terlindungi?
+          </h4>
+<span class="material-symbols-outlined text-slate-ink group-open:rotate-180 transition-transform duration-200" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-3 text-slate-ink text-body-sm font-body-sm leading-relaxed pr-8">
+          Sangat aman. Kami tidak memperjualbelikan data siswa kepada pihak ketiga untuk keperluan iklan. Data nama, kontak, dan hasil belajar hanya dapat diakses oleh sekolah yang bersangkutan dan orang tua yang memegang kode verifikasi resmi.
+        </p>
+</details>
+<!-- Item 5 -->
+<details class="group py-5 cursor-pointer">
+<summary class="flex justify-between items-center list-none select-none">
+<h4 class="font-display font-bold text-ink text-base group-hover:text-board transition-colors pr-4">
+            Berapa lama durasi program untuk satu semester?
+          </h4>
+<span class="material-symbols-outlined text-slate-ink group-open:rotate-180 transition-transform duration-200" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-3 text-slate-ink text-body-sm font-body-sm leading-relaxed pr-8">
+          Program standar disusun untuk durasi 8 hingga 12 minggu pertemuan, mencakup riset produk, pembuatan etalase toko, pemasaran produk, simulasi transaksi, hingga laporan pertanggungjawaban akhir.
+        </p>
+</details>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- FOOTER (Shared Component Schema: Footer)                                 -->
+<!-- ========================================================================= -->
+<footer class="bg-ink border-t border-slate-ink/40 w-full text-paper py-16">
+<div class="w-full max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+<!-- Top Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Brand Info (5 cols) -->
+<div class="md:col-span-5">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 bg-board flex items-center justify-center text-sheet font-display font-bold text-lg">
+              S
+            </div>
+<span class="text-headline-md font-headline-md font-bold text-sheet">Sunrise Academy</span>
+</div>
+<p class="text-slate-ink text-body-sm font-body-sm max-w-sm mb-6 leading-relaxed">
+            Platform laboratorium niaga digital terstruktur untuk sekolah menengah kejuruan dan sekolah menengah atas di seluruh Indonesia.
+          </p>
+<div class="text-xs text-slate-ink font-mono">
+            Operasional Resmi: Jakarta • Bandung • Yogyakarta
+          </div>
+</div>
+<!-- Navigation Columns (7 cols) -->
+<div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6">
+<div>
+<h5 class="text-xs font-mono uppercase tracking-wider text-marigold mb-4">Akademik</h5>
+<ul class="space-y-2.5 text-body-sm font-body-sm">
+<li><a class="text-slate-ink hover:text-marigold transition-colors duration-150" href="#">Pedoman Rubrik</a></li>
+<li><a class="text-slate-ink hover:text-marigold transition-colors duration-150" href="#">Studi Kasus</a></li>
+<li><a class="text-slate-ink hover:text-marigold transition-colors duration-150" href="#">Dokumentasi Kurikulum</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-mono uppercase tracking-wider text-marigold mb-4">Kebijakan</h5>
+<ul class="space-y-2.5 text-body-sm font-body-sm">
+<li><a class="text-slate-ink hover:text-marigold transition-colors duration-150" href="#">Kebijakan Privasi</a></li>
+<li><a class="text-slate-ink hover:text-marigold transition-colors duration-150" href="#">Syarat Layanan</a></li>
+<li><a class="text-slate-ink hover:text-marigold transition-colors duration-150" href="#">Keamanan Data</a></li>
+</ul>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<h5 class="text-xs font-mono uppercase tracking-wider text-marigold mb-4">Kemitraan</h5>
+<ul class="space-y-2.5 text-body-sm font-body-sm">
+<li><a class="text-slate-ink hover:text-marigold transition-colors duration-150" href="#">Kontak Instansi</a></li>
+<li><a class="text-slate-ink hover:text-marigold transition-colors duration-150" href="#">Portal Pengawas</a></li>
+<li><a class="text-slate-ink hover:text-marigold transition-colors duration-150" href="#">Pusat Bantuan</a></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Hairline Rule -->
+<div class="border-t border-slate-ink/30 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-ink">
+<p class="text-body-sm font-body-sm text-slate-ink">
+          © 2025 Sunrise Academy (PT Laboratorium Niaga Siswa). Hak Cipta Dilindungi Undang-Undang. Terdaftar di Kemendikbudristek.
+        </p>
+<div class="flex items-center gap-6">
+<span class="inline-flex items-center gap-1.5">
+<span class="w-2 h-2 bg-pass rounded-full"></span>
+            Server Operasional Aktif
+          </span>
+</div>
+</div>
+</div>
+</footer>
+<!-- ========================================================================= -->
+<!-- Script for Interactive Role Switcher                                      -->
+<!-- ========================================================================= -->
+<script>
+    const roleData = {
+      murid: {
+        tag: "Ruang Kerja Murid — Kelas XI Bisnis Daring",
+        desc: "Tahu apa yang harus dikerjakan, apa yang belum lengkap, dan bagaimana memperbaikinya.",
+        html: `
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Tugas Aktif</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">Penyusunan Foto Katalog Toko</p>
+              <div class="flex items-center justify-between text-xs text-slate-ink">
+                <span>Tenggat: Besok 17:00</span>
+                <span class="text-marigold font-medium">Revisi 1</span>
+              </div>
+            </div>
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Status Nilai</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">Modul 02: Riset Pemasok</p>
+              <div class="flex items-center justify-between text-xs text-slate-ink">
+                <span>Nilai: 88 / 100</span>
+                <span class="text-pass font-medium">Tuntas</span>
+              </div>
+            </div>
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Komentar Pembimbing</span>
+              <p class="text-xs text-slate-ink italic mb-2">"Gunakan deskripsi berat riil produk agar penghitungan ongkos kirim valid."</p>
+              <span class="text-[10px] text-slate-ink block">Bu Dian • 2 jam lalu</span>
+            </div>
+          </div>
+        `
+      },
+      guru: {
+        tag: "Panel Pengampu Guru — Manajemen PKWU",
+        desc: "Menyusun pekerjaan, mereview dengan rubrik, dan mendampingi tanpa berpindah-pindah alat.",
+        html: `
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Antrean Penilaian</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">14 Tugas Menunggu Review</p>
+              <span class="text-xs text-slate-ink">Target selesai: Hari ini</span>
+            </div>
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Ketuntasan Kelas XI-B</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">28 dari 32 Siswa Tuntas</p>
+              <div class="w-full h-1.5 bg-slate-ink/30 mt-2">
+                <div class="bg-marigold h-full w-[87%]"></div>
+              </div>
+            </div>
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Ekspor Nilai</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">Format Dapodik / Merdeka</p>
+              <span class="text-xs text-marigold font-medium cursor-pointer">Unduh Rekap Spreadsheet (.xlsx)</span>
+            </div>
+          </div>
+        `
+      },
+      orangtua: {
+        tag: "Ringkasan Wali Murid — Akses Transparan",
+        desc: "Melihat ringkasan perkembangan anak tanpa mendapat akses ke data murid lain.",
+        html: `
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Progres Belajar Anak</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">Ahmad Fauzi (XI B)</p>
+              <span class="text-xs text-pass font-medium">92% Kehadiran & Partisipasi</span>
+            </div>
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Etalase Toko Mandiri</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">Kripik Singkong Berkah</p>
+              <span class="text-xs text-slate-ink">Simulasi Transaksi: Aktif</span>
+            </div>
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Umpan Balik Guru</span>
+              <p class="text-xs text-slate-ink italic">"Sangat teliti dalam pembukuan arus kas sederhana."</p>
+            </div>
+          </div>
+        `
+      },
+      instansi: {
+        tag: "Pusat Kendali Sekolah & Kepala Lab",
+        desc: "Memantau jalannya program lintas kelas melalui data yang sudah diringkas.",
+        html: `
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Partisipasi Total Sekolah</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">340 Siswa • 4 Jurusan</p>
+              <span class="text-xs text-pass font-medium">100% Guru Terdaftar Aktif</span>
+            </div>
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Beban Tugas & Waktu Review</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">Rata-rata 2.4 Hari</p>
+              <span class="text-xs text-slate-ink">Di bawah batas toleransi kurikulum</span>
+            </div>
+            <div class="bg-ink border border-slate-ink/40 p-4">
+              <span class="text-xs text-slate-ink font-mono block mb-1">Laporan Akreditasi</span>
+              <p class="font-display font-bold text-paper text-sm mb-2">Portofolio Siap Audit</p>
+              <span class="text-xs text-marigold font-medium">Dokumen Akreditasi Tersedia</span>
+            </div>
+          </div>
+        `
+      }
+    };
+
+    function setRole(roleKey) {
+      const data = roleData[roleKey];
+      if (!data) return;
+
+      // Update Tab Styles
+      document.querySelectorAll('.role-tab').forEach(tab => {
+        tab.classList.remove('text-paper', 'border-marigold');
+        tab.classList.add('text-slate-ink', 'border-transparent');
+      });
+      const activeTab = document.getElementById(`tab-${roleKey}`);
+      if (activeTab) {
+        activeTab.classList.remove('text-slate-ink', 'border-transparent');
+        activeTab.classList.add('text-paper', 'border-marigold');
+      }
+
+      // Update Content
+      document.getElementById('role-desc').textContent = data.desc;
+      document.getElementById('role-workspace-tag').textContent = data.tag;
+      document.getElementById('role-preview-content').innerHTML = data.html;
+    }
+
+    // Initialize Default Role
+    document.addEventListener('DOMContentLoaded', () => {
+      setRole('murid');
+    });
+  </script>
+</body></html>

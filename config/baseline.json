@@ -1,0 +1,1541 @@
+{
+    "roles": [
+        {
+            "slug": "identity-verifier",
+            "name": "Verifier Identitas",
+            "description": null,
+            "isSystem": true,
+            "isActive": true
+        },
+        {
+            "slug": "parent",
+            "name": "Orang Tua/Wali",
+            "description": "Memantau anak yang terverifikasi",
+            "isSystem": true,
+            "isActive": true
+        },
+        {
+            "slug": "program-manager",
+            "name": "Program Manager",
+            "description": null,
+            "isSystem": true,
+            "isActive": true
+        },
+        {
+            "slug": "reviewer",
+            "name": "Reviewer Akademik",
+            "description": null,
+            "isSystem": true,
+            "isActive": true
+        },
+        {
+            "slug": "school-admin",
+            "name": "Admin Sekolah",
+            "description": "Mengelola master data sekolah",
+            "isSystem": true,
+            "isActive": true
+        },
+        {
+            "slug": "student",
+            "name": "Siswa",
+            "description": "Role untuk siswa",
+            "isSystem": true,
+            "isActive": true
+        },
+        {
+            "slug": "super-admin",
+            "name": "Super Admin",
+            "description": "Full system access",
+            "isSystem": true,
+            "isActive": true
+        },
+        {
+            "slug": "support",
+            "name": "Petugas Dukungan",
+            "description": null,
+            "isSystem": true,
+            "isActive": true
+        },
+        {
+            "slug": "teacher",
+            "name": "Guru",
+            "description": "Role untuk guru",
+            "isSystem": true,
+            "isActive": true
+        }
+    ],
+    "permissions": [
+        {
+            "resource": "access-grants",
+            "action": "manage",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "access-grants",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "access-plans",
+            "action": "manage",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "access-plans",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "achievements",
+            "action": "manage",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "achievements",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "affiliate",
+            "action": "create",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "affiliate",
+            "action": "import",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "affiliate",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "affiliate",
+            "action": "verify",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "analytics",
+            "action": "create",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "announcements",
+            "action": "manage",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "announcements",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "assignments",
+            "action": "create",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "assignments",
+            "action": "delete",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "assignments",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "assignments",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "certificates",
+            "action": "manage",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "certificates",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "certificates",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "cms",
+            "action": "manage",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "dashboard",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "helpdesk",
+            "action": "create",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "helpdesk",
+            "action": "manage",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "helpdesk",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "helpdesk",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "identity",
+            "action": "create",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "identity",
+            "action": "verify",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "identity.document",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "leads",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "leads",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "master-data",
+            "action": "create",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "master-data",
+            "action": "delete",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "master-data",
+            "action": "import",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "master-data",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "master-data",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "materials",
+            "action": "create",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "materials",
+            "action": "delete",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "materials",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "materials",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "monitoring",
+            "action": "manage",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "monitoring",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "notifications",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "notifications",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "offline-drafts",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "portfolio",
+            "action": "create",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "portfolio",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "portfolio",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "privacy",
+            "action": "manage",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "public-statistics",
+            "action": "approve",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "reports",
+            "action": "export",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "reports",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "submissions",
+            "action": "create",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "submissions",
+            "action": "read",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "submissions",
+            "action": "review",
+            "description": null,
+            "isSystem": true
+        },
+        {
+            "resource": "submissions",
+            "action": "update",
+            "description": null,
+            "isSystem": true
+        }
+    ],
+    "rolePermissions": [
+        {
+            "role": "identity-verifier",
+            "resource": "identity.document",
+            "action": "read"
+        },
+        {
+            "role": "identity-verifier",
+            "resource": "identity",
+            "action": "verify"
+        },
+        {
+            "role": "parent",
+            "resource": "achievements",
+            "action": "read"
+        },
+        {
+            "role": "parent",
+            "resource": "analytics",
+            "action": "create"
+        },
+        {
+            "role": "parent",
+            "resource": "announcements",
+            "action": "read"
+        },
+        {
+            "role": "parent",
+            "resource": "certificates",
+            "action": "read"
+        },
+        {
+            "role": "parent",
+            "resource": "dashboard",
+            "action": "read"
+        },
+        {
+            "role": "parent",
+            "resource": "helpdesk",
+            "action": "create"
+        },
+        {
+            "role": "parent",
+            "resource": "helpdesk",
+            "action": "read"
+        },
+        {
+            "role": "parent",
+            "resource": "helpdesk",
+            "action": "update"
+        },
+        {
+            "role": "parent",
+            "resource": "monitoring",
+            "action": "read"
+        },
+        {
+            "role": "parent",
+            "resource": "notifications",
+            "action": "read"
+        },
+        {
+            "role": "parent",
+            "resource": "notifications",
+            "action": "update"
+        },
+        {
+            "role": "parent",
+            "resource": "portfolio",
+            "action": "read"
+        },
+        {
+            "role": "parent",
+            "resource": "reports",
+            "action": "export"
+        },
+        {
+            "role": "parent",
+            "resource": "reports",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "achievements",
+            "action": "manage"
+        },
+        {
+            "role": "program-manager",
+            "resource": "achievements",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "analytics",
+            "action": "create"
+        },
+        {
+            "role": "program-manager",
+            "resource": "announcements",
+            "action": "manage"
+        },
+        {
+            "role": "program-manager",
+            "resource": "announcements",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "certificates",
+            "action": "manage"
+        },
+        {
+            "role": "program-manager",
+            "resource": "certificates",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "certificates",
+            "action": "update"
+        },
+        {
+            "role": "program-manager",
+            "resource": "cms",
+            "action": "manage"
+        },
+        {
+            "role": "program-manager",
+            "resource": "dashboard",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "helpdesk",
+            "action": "create"
+        },
+        {
+            "role": "program-manager",
+            "resource": "helpdesk",
+            "action": "manage"
+        },
+        {
+            "role": "program-manager",
+            "resource": "helpdesk",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "helpdesk",
+            "action": "update"
+        },
+        {
+            "role": "program-manager",
+            "resource": "leads",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "leads",
+            "action": "update"
+        },
+        {
+            "role": "program-manager",
+            "resource": "monitoring",
+            "action": "manage"
+        },
+        {
+            "role": "program-manager",
+            "resource": "monitoring",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "notifications",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "notifications",
+            "action": "update"
+        },
+        {
+            "role": "program-manager",
+            "resource": "offline-drafts",
+            "action": "update"
+        },
+        {
+            "role": "program-manager",
+            "resource": "portfolio",
+            "action": "create"
+        },
+        {
+            "role": "program-manager",
+            "resource": "portfolio",
+            "action": "read"
+        },
+        {
+            "role": "program-manager",
+            "resource": "portfolio",
+            "action": "update"
+        },
+        {
+            "role": "program-manager",
+            "resource": "public-statistics",
+            "action": "approve"
+        },
+        {
+            "role": "program-manager",
+            "resource": "reports",
+            "action": "export"
+        },
+        {
+            "role": "program-manager",
+            "resource": "reports",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "access-grants",
+            "action": "manage"
+        },
+        {
+            "role": "school-admin",
+            "resource": "access-grants",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "achievements",
+            "action": "manage"
+        },
+        {
+            "role": "school-admin",
+            "resource": "achievements",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "analytics",
+            "action": "create"
+        },
+        {
+            "role": "school-admin",
+            "resource": "announcements",
+            "action": "manage"
+        },
+        {
+            "role": "school-admin",
+            "resource": "announcements",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "certificates",
+            "action": "manage"
+        },
+        {
+            "role": "school-admin",
+            "resource": "certificates",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "certificates",
+            "action": "update"
+        },
+        {
+            "role": "school-admin",
+            "resource": "cms",
+            "action": "manage"
+        },
+        {
+            "role": "school-admin",
+            "resource": "dashboard",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "helpdesk",
+            "action": "create"
+        },
+        {
+            "role": "school-admin",
+            "resource": "helpdesk",
+            "action": "manage"
+        },
+        {
+            "role": "school-admin",
+            "resource": "helpdesk",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "helpdesk",
+            "action": "update"
+        },
+        {
+            "role": "school-admin",
+            "resource": "leads",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "leads",
+            "action": "update"
+        },
+        {
+            "role": "school-admin",
+            "resource": "master-data",
+            "action": "create"
+        },
+        {
+            "role": "school-admin",
+            "resource": "master-data",
+            "action": "delete"
+        },
+        {
+            "role": "school-admin",
+            "resource": "master-data",
+            "action": "import"
+        },
+        {
+            "role": "school-admin",
+            "resource": "master-data",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "master-data",
+            "action": "update"
+        },
+        {
+            "role": "school-admin",
+            "resource": "monitoring",
+            "action": "manage"
+        },
+        {
+            "role": "school-admin",
+            "resource": "monitoring",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "notifications",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "notifications",
+            "action": "update"
+        },
+        {
+            "role": "school-admin",
+            "resource": "offline-drafts",
+            "action": "update"
+        },
+        {
+            "role": "school-admin",
+            "resource": "portfolio",
+            "action": "create"
+        },
+        {
+            "role": "school-admin",
+            "resource": "portfolio",
+            "action": "read"
+        },
+        {
+            "role": "school-admin",
+            "resource": "portfolio",
+            "action": "update"
+        },
+        {
+            "role": "school-admin",
+            "resource": "privacy",
+            "action": "manage"
+        },
+        {
+            "role": "school-admin",
+            "resource": "public-statistics",
+            "action": "approve"
+        },
+        {
+            "role": "school-admin",
+            "resource": "reports",
+            "action": "export"
+        },
+        {
+            "role": "school-admin",
+            "resource": "reports",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "achievements",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "affiliate",
+            "action": "create"
+        },
+        {
+            "role": "student",
+            "resource": "affiliate",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "analytics",
+            "action": "create"
+        },
+        {
+            "role": "student",
+            "resource": "announcements",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "assignments",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "certificates",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "certificates",
+            "action": "update"
+        },
+        {
+            "role": "student",
+            "resource": "dashboard",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "helpdesk",
+            "action": "create"
+        },
+        {
+            "role": "student",
+            "resource": "helpdesk",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "helpdesk",
+            "action": "update"
+        },
+        {
+            "role": "student",
+            "resource": "identity",
+            "action": "create"
+        },
+        {
+            "role": "student",
+            "resource": "materials",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "monitoring",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "notifications",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "notifications",
+            "action": "update"
+        },
+        {
+            "role": "student",
+            "resource": "offline-drafts",
+            "action": "update"
+        },
+        {
+            "role": "student",
+            "resource": "portfolio",
+            "action": "create"
+        },
+        {
+            "role": "student",
+            "resource": "portfolio",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "portfolio",
+            "action": "update"
+        },
+        {
+            "role": "student",
+            "resource": "reports",
+            "action": "export"
+        },
+        {
+            "role": "student",
+            "resource": "reports",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "submissions",
+            "action": "create"
+        },
+        {
+            "role": "student",
+            "resource": "submissions",
+            "action": "read"
+        },
+        {
+            "role": "student",
+            "resource": "submissions",
+            "action": "update"
+        },
+        {
+            "role": "support",
+            "resource": "announcements",
+            "action": "manage"
+        },
+        {
+            "role": "support",
+            "resource": "announcements",
+            "action": "read"
+        },
+        {
+            "role": "support",
+            "resource": "helpdesk",
+            "action": "create"
+        },
+        {
+            "role": "support",
+            "resource": "helpdesk",
+            "action": "manage"
+        },
+        {
+            "role": "support",
+            "resource": "helpdesk",
+            "action": "read"
+        },
+        {
+            "role": "support",
+            "resource": "helpdesk",
+            "action": "update"
+        },
+        {
+            "role": "support",
+            "resource": "notifications",
+            "action": "read"
+        },
+        {
+            "role": "support",
+            "resource": "notifications",
+            "action": "update"
+        },
+        {
+            "role": "teacher",
+            "resource": "achievements",
+            "action": "manage"
+        },
+        {
+            "role": "teacher",
+            "resource": "achievements",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "affiliate",
+            "action": "import"
+        },
+        {
+            "role": "teacher",
+            "resource": "affiliate",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "affiliate",
+            "action": "verify"
+        },
+        {
+            "role": "teacher",
+            "resource": "analytics",
+            "action": "create"
+        },
+        {
+            "role": "teacher",
+            "resource": "announcements",
+            "action": "manage"
+        },
+        {
+            "role": "teacher",
+            "resource": "announcements",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "assignments",
+            "action": "create"
+        },
+        {
+            "role": "teacher",
+            "resource": "assignments",
+            "action": "delete"
+        },
+        {
+            "role": "teacher",
+            "resource": "assignments",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "assignments",
+            "action": "update"
+        },
+        {
+            "role": "teacher",
+            "resource": "certificates",
+            "action": "manage"
+        },
+        {
+            "role": "teacher",
+            "resource": "certificates",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "dashboard",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "helpdesk",
+            "action": "create"
+        },
+        {
+            "role": "teacher",
+            "resource": "helpdesk",
+            "action": "manage"
+        },
+        {
+            "role": "teacher",
+            "resource": "helpdesk",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "helpdesk",
+            "action": "update"
+        },
+        {
+            "role": "teacher",
+            "resource": "materials",
+            "action": "create"
+        },
+        {
+            "role": "teacher",
+            "resource": "materials",
+            "action": "delete"
+        },
+        {
+            "role": "teacher",
+            "resource": "materials",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "materials",
+            "action": "update"
+        },
+        {
+            "role": "teacher",
+            "resource": "monitoring",
+            "action": "manage"
+        },
+        {
+            "role": "teacher",
+            "resource": "monitoring",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "notifications",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "notifications",
+            "action": "update"
+        },
+        {
+            "role": "teacher",
+            "resource": "portfolio",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "reports",
+            "action": "export"
+        },
+        {
+            "role": "teacher",
+            "resource": "reports",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "submissions",
+            "action": "read"
+        },
+        {
+            "role": "teacher",
+            "resource": "submissions",
+            "action": "review"
+        }
+    ],
+    "accessPlans": [
+        {
+            "code": "FREE",
+            "name": "Gratis",
+            "rank": 1,
+            "moduleLimit": 8,
+            "status": "ACTIVE"
+        },
+        {
+            "code": "MEDIUM",
+            "name": "Medium",
+            "rank": 2,
+            "moduleLimit": 10,
+            "status": "ACTIVE"
+        },
+        {
+            "code": "ADVANCED",
+            "name": "Advanced",
+            "rank": 3,
+            "moduleLimit": 12,
+            "status": "ACTIVE"
+        }
+    ],
+    "entitlementDefinitions": [
+        {
+            "key": "affiliate.content.submit",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "affiliate.metrics.manage",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "assessment.overview.read",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "assignments.standard.read",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "assignments.standard.submit",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "dashboards.advanced.read",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "early_warnings.read",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "learning.materials.read",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "learning.modules.max",
+            "valueType": "INTEGER",
+            "isActive": true
+        },
+        {
+            "key": "reports.export",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "student_store.submit",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        },
+        {
+            "key": "support.advanced.use",
+            "valueType": "BOOLEAN",
+            "isActive": true
+        }
+    ],
+    "planEntitlements": [
+        {
+            "plan": "ADVANCED",
+            "key": "affiliate.content.submit",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "affiliate.metrics.manage",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "assessment.overview.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "assignments.standard.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "assignments.standard.submit",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "dashboards.advanced.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "early_warnings.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "learning.materials.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "learning.modules.max",
+            "enabled": true,
+            "valueJson": "12"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "reports.export",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "student_store.submit",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "ADVANCED",
+            "key": "support.advanced.use",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "FREE",
+            "key": "affiliate.content.submit",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "FREE",
+            "key": "affiliate.metrics.manage",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "FREE",
+            "key": "assessment.overview.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "FREE",
+            "key": "assignments.standard.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "FREE",
+            "key": "assignments.standard.submit",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "FREE",
+            "key": "dashboards.advanced.read",
+            "enabled": false,
+            "valueJson": "false"
+        },
+        {
+            "plan": "FREE",
+            "key": "early_warnings.read",
+            "enabled": false,
+            "valueJson": "false"
+        },
+        {
+            "plan": "FREE",
+            "key": "learning.materials.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "FREE",
+            "key": "learning.modules.max",
+            "enabled": true,
+            "valueJson": "8"
+        },
+        {
+            "plan": "FREE",
+            "key": "reports.export",
+            "enabled": false,
+            "valueJson": "false"
+        },
+        {
+            "plan": "FREE",
+            "key": "student_store.submit",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "FREE",
+            "key": "support.advanced.use",
+            "enabled": false,
+            "valueJson": "false"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "affiliate.content.submit",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "affiliate.metrics.manage",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "assessment.overview.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "assignments.standard.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "assignments.standard.submit",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "dashboards.advanced.read",
+            "enabled": false,
+            "valueJson": "false"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "early_warnings.read",
+            "enabled": false,
+            "valueJson": "false"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "learning.materials.read",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "learning.modules.max",
+            "enabled": true,
+            "valueJson": "10"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "reports.export",
+            "enabled": false,
+            "valueJson": "false"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "student_store.submit",
+            "enabled": true,
+            "valueJson": "true"
+        },
+        {
+            "plan": "MEDIUM",
+            "key": "support.advanced.use",
+            "enabled": false,
+            "valueJson": "false"
+        }
+    ],
+    "planOffers": [
+        {
+            "plan": "ADVANCED",
+            "code": "ADVANCED-12M",
+            "slug": "advanced-12-bulan",
+            "name": "Advanced 12 Bulan",
+            "audience": "INDIVIDUAL",
+            "billingModel": "ONE_TIME",
+            "accessDurationDays": 365,
+            "seatMin": null,
+            "seatMax": null,
+            "status": "ACTIVE",
+            "termsVersion": "synthetic-v1",
+            "refundPolicyVersion": "synthetic-v1",
+            "prices": [
+                {
+                    "currency": "IDR",
+                    "amount": "50000.00",
+                    "compareAtAmount": "899000.00",
+                    "taxMode": "INCLUSIVE",
+                    "taxRate": null,
+                    "status": "ACTIVE"
+                }
+            ]
+        },
+        {
+            "plan": "FREE",
+            "code": "FREE-INDIVIDUAL",
+            "slug": "gratis",
+            "name": "Paket Gratis",
+            "audience": "INDIVIDUAL",
+            "billingModel": "FREE",
+            "accessDurationDays": null,
+            "seatMin": null,
+            "seatMax": null,
+            "status": "ACTIVE",
+            "termsVersion": "synthetic-v1",
+            "refundPolicyVersion": "synthetic-v1",
+            "prices": [
+                {
+                    "currency": "IDR",
+                    "amount": "0.00",
+                    "compareAtAmount": null,
+                    "taxMode": "INCLUSIVE",
+                    "taxRate": null,
+                    "status": "ACTIVE"
+                }
+            ]
+        },
+        {
+            "plan": "MEDIUM",
+            "code": "MEDIUM-12M",
+            "slug": "medium-12-bulan",
+            "name": "Medium 12 Bulan",
+            "audience": "INDIVIDUAL",
+            "billingModel": "ONE_TIME",
+            "accessDurationDays": 365,
+            "seatMin": null,
+            "seatMax": null,
+            "status": "ACTIVE",
+            "termsVersion": "synthetic-v1",
+            "refundPolicyVersion": "synthetic-v1",
+            "prices": [
+                {
+                    "currency": "IDR",
+                    "amount": "25000.00",
+                    "compareAtAmount": "499000.00",
+                    "taxMode": "INCLUSIVE",
+                    "taxRate": null,
+                    "status": "ACTIVE"
+                }
+            ]
+        }
+    ],
+    "consentDocuments": [
+        {
+            "type": "ANALYTICS",
+            "version": "2026-08-04",
+            "title": "Analytics opsional",
+            "content": "Pilihan penggunaan data analytics non-sensitif untuk peningkatan layanan.",
+            "effectiveAt": "2026-08-04"
+        },
+        {
+            "type": "GUARDIAN",
+            "version": "2026-08-04",
+            "title": "Persetujuan orang tua/wali",
+            "content": "Persetujuan wali terverifikasi untuk pemrosesan data siswa sesuai tujuan program.",
+            "effectiveAt": "2026-08-04"
+        },
+        {
+            "type": "IDENTITY",
+            "version": "2026-08-27-identity-v1",
+            "title": "Pemrosesan identitas",
+            "content": "Persetujuan terbatas untuk memproses identifier dan dokumen privat dalam alur verifikasi identitas.",
+            "effectiveAt": "2026-08-27"
+        },
+        {
+            "type": "PLATFORM",
+            "version": "2026-08-04",
+            "title": "Penggunaan platform",
+            "content": "Persetujuan pemrosesan data yang diperlukan untuk menyediakan akun dan layanan pembelajaran.",
+            "effectiveAt": "2026-08-04"
+        },
+        {
+            "type": "PUBLICATION",
+            "version": "2026-08-04",
+            "title": "Publikasi karya",
+            "content": "Pilihan sukarela untuk publikasi karya atau materi siswa yang telah disetujui.",
+            "effectiveAt": "2026-08-04"
+        }
+    ]
+}

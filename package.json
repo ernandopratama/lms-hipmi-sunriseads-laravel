@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "concurrently": "^9.2.5",
+    "laravel-vite-plugin": "^2.0.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5",
+    "vite": "^7.0.0",
+    "vue-tsc": "^3.3.13"
+  },
+  "dependencies": {
+    "@e965/xlsx": "^0.20.3",
+    "@lucide/vue": "1.28.0",
+    "vue": "^3.5.44",
+    "vue-router": "^4.6.4"
+  }
+}

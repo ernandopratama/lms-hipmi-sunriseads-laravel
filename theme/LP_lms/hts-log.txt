@@ -1,0 +1,24 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 30 Oct 2026 05:33:51 at https://ex-coders.com/html/learnit/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://ex-coders.com/html/learnit/index.html -O1 "C:\Users\THINKPAD\Desktop\Project\#Theme\LP_lms_2" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/sign-up.html (from https://ex-coders.com/html/learnit/index.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/sign-in.html (from https://ex-coders.com/html/learnit/index.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/service-details.html (from https://ex-coders.com/html/learnit/index.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/assets/images/icon/cancel.png (from https://ex-coders.com/html/learnit/assets/css/style.css)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/tab-content1 (from https://ex-coders.com/html/learnit/index-2.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/tab-content2 (from https://ex-coders.com/html/learnit/index-2.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/tab-content3 (from https://ex-coders.com/html/learnit/index-2.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/tab-content4 (from https://ex-coders.com/html/learnit/index-2.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/blog-details.htm (from https://ex-coders.com/html/learnit/index-3.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/course-details.htmll (from https://ex-coders.com/html/learnit/index-7.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/policy.html (from https://ex-coders.com/html/learnit/index-10.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/condition.html (from https://ex-coders.com/html/learnit/index-10.html)
+05:36:09	Error: 	"Not Found" (404) at link https://ex-coders.com/html/learnit/login.html (from https://ex-coders.com/html/learnit/index-10.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 18 seconds : 597 links scanned, 583 files written (65309179 bytes overall) [58729520 bytes received at 425576 bytes/sec], 9798901 bytes transferred using HTTP compression in 68 files, ratio 30%, 45.9 requests per connection
+(13 errors, 0 warnings, 0 messages)
