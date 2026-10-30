@@ -24,7 +24,7 @@ let active = true;
 
 async function loadSession() {
   try {
-    const response = await fetch("/api/session", { cache: "no-store" });
+    const response = await fetch("/api/session?optional=1", { cache: "no-store" });
     const data = response.ok ? await response.json() as SessionProfile : null;
     if (active) session.value = data;
   } catch {

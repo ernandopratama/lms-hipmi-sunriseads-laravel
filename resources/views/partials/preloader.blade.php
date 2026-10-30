@@ -112,21 +112,9 @@
         const minDuration = reduced ? 600 : 2000;
         const start = performance.now();
         const bar = el.querySelector(".sdp-bar span");
-        // Real readiness milestones; the bar never runs ahead of them, so 100% only shows when the page is ready.
-        const tasks = { dom: false, logo: false, fonts: false, load: false, app: false };
-        const total = Object.keys(tasks).length;
-        const done = (name) => { tasks[name] = true; };
+        // Time-driven on purpose: the overlay closes when the animation ends, whatever the network/API (e.g. a 401) does.
         let finished = false;
         let frame = 0;
-
-        if (document.readyState !== "loading") done("dom");
-        else document.addEventListener("DOMContentLoaded", () => done("dom"), { once: true });
-        if (document.readyState === "complete") done("load");
-        else addEventListener("load", () => done("load"), { once: true });
-        addEventListener("app:mounted", () => done("app"), { once: true });
-        (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => done("fonts"), () => done("fonts"));
-        const logo = el.querySelector(".sdp-disc");
-        (logo.decode ? logo.decode() : Promise.resolve()).then(() => done("logo"), () => done("logo"));
 
         const finish = () => {
             if (finished) return;
@@ -143,14 +131,13 @@
         };
 
         const tick = () => {
-            const ready = Object.values(tasks).filter(Boolean).length;
             const elapsed = performance.now() - start;
-            bar.style.transform = "scaleX(" + Math.min(ready / total, elapsed / minDuration) + ")";
-            if (ready === total && elapsed >= minDuration) finish();
+            bar.style.transform = "scaleX(" + Math.min(1, elapsed / minDuration) + ")";
+            if (elapsed >= minDuration) finish();
             else frame = requestAnimationFrame(tick);
         };
         frame = requestAnimationFrame(tick);
-        // Never trap the user behind the overlay if a milestone fails to fire.
-        const failsafe = setTimeout(finish, 15000);
+        // rAF is paused in background tabs; the timer still closes the overlay.
+        const failsafe = setTimeout(finish, minDuration + 300);
     })();
 </script>

@@ -23,6 +23,7 @@ class SessionTest extends TestCase
 
         $this->assertSame(1, $this->demoUser('teacher')->failed_login_count);
         $this->getJson('/api/session')->assertUnauthorized();
+        $this->assertSame('null', $this->getJson('/api/session?optional=1')->assertOk()->getContent());
     }
 
     public function test_five_failures_lock_the_account(): void

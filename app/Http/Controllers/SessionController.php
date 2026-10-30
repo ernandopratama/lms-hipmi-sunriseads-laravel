@@ -25,6 +25,8 @@ class SessionController extends Controller
     {
         $user = $request->user();
         if (! $user || $user->status !== 'active' || (int) $request->session()->get('auth_session_version', 0) !== (int) $user->session_version) {
+            // ?optional=1: public pages probe login state without a 401 in the console.
+            if ($request->boolean('optional')) return JsonResponse::fromJsonString('null', 200, ['Cache-Control' => 'no-store']);
             return response()->json(['message' => 'Sesi tidak valid'], 401)->header('Cache-Control', 'no-store');
         }
 
